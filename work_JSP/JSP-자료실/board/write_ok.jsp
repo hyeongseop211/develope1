@@ -83,6 +83,15 @@
 	board.setB_content(multi.getParameter("b_content"));
 	board.setB_pwd(multi.getParameter("b_pwd"));
 	
+	//파일 업로드 추가후 답변글 달면 새글로 인식 해결
+	board.setB_id(Integer.parseInt(multi.getParameter("b_id")));
+	board.setB_ref(Integer.parseInt(multi.getParameter("b_ref")));
+	board.setB_step(Integer.parseInt(multi.getParameter("b_step")));
+	board.setB_level(Integer.parseInt(multi.getParameter("b_level")));
+	
+	board.setB_date(new Timestamp(System.currentTimeMillis()));
+	board.setB_ip(ip);
+	
 	if(file != null){
 		board.setB_fname(file);
 		board.setB_fsize(fileSize);
