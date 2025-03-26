@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	Calculator 클래스로 calculator 객체 생성 -->
+	<bean id="calculator" class="com.lgy.spring_3_2.Calculator"></bean>
+	
+<!-- 	MyCalculator 클래스로 myCalculator 객체 생성 -->
+	<bean id="myCalculator" class="com.lgy.spring_3_2.MyCalculator">
+<!-- 		setCalculator 호출 -->
+		<property name="calculator">
+<!-- 		<bean id="calculator" 객체임 -->
+			<ref bean="calculator"/>
+		</property>
+<!-- 		setFirstNum 호출 -->
+		<property name="firstNum" value="10"></property>
+<!-- 		setSecondNum 호출 -->
+		<property name="secondNum" value="2"></property>
+	</bean>
+</beans>
