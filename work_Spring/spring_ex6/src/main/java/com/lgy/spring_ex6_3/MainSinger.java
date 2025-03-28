@@ -1,0 +1,37 @@
+package com.lgy.spring_ex6_3;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class MainSinger {
+	public static void main(String[] args) {
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+//		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:employeeCTX.xml");
+		String configLoc = "classpath:singerCTX.xml";
+		String configLoc2 = "classpath:singerCTX2.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc, configLoc2);
+		
+		Singer singer1 = ctx.getBean("singer1", Singer.class);
+		System.out.println("이름 : "+singer1.getName());
+		System.out.println("멤버 : "+singer1.getMember());
+		System.out.println("노래 : "+singer1.getSong());
+		System.out.println("===========================");
+		
+		SingerInfo singerInfo1 = ctx.getBean("singerInfo1", SingerInfo.class);
+		Singer singer2 = singerInfo1.getSinger();
+		System.out.println("이름 : "+singer2.getName());
+		System.out.println("멤버 : "+singer2.getMember());
+		System.out.println("노래 : "+singer2.getSong());
+		System.out.println("===========================");
+		
+		Singer singer3 = ctx.getBean("singer3", Singer.class);
+		System.out.println("이름 : "+singer3.getName());
+		System.out.println("멤버 : "+singer3.getMember());
+		System.out.println("노래 : "+singer3.getSong());
+		
+	
+	
+	}
+}

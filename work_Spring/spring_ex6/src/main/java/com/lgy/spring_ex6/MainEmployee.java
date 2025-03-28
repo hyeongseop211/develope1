@@ -1,0 +1,36 @@
+package com.lgy.spring_ex6;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class MainEmployee {
+	public static void main(String[] args) {
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+//		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:employeeCTX.xml");
+		String configLoc = "classpath:employeeCTX.xml";
+		String configLoc2 = "classpath:employeeCTX2.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc, configLoc2);
+		
+		Employee employee1 = ctx.getBean("employee1", Employee.class);
+		System.out.println("이름 : "+employee1.getName());
+		System.out.println("월급 : "+employee1.getSal());
+		System.out.println("자격증 : "+employee1.getJa());
+		System.out.println("===========================");
+		
+		EmplyeeInfo emplyeeInfo = ctx.getBean("emplyeeInfo1", EmplyeeInfo.class);
+		Employee employee2 = emplyeeInfo.getEmployee();
+		System.out.println("이름 : "+employee1.getName());
+		System.out.println("월급 : "+employee1.getSal());
+		System.out.println("자격증 : "+employee1.getJa());
+		System.out.println("===========================");
+		
+		Employee employee3 = ctx.getBean("employee3", Employee.class);
+		System.out.println("이름 : "+employee3.getName());
+		System.out.println("월급 : "+employee3.getSal());
+		System.out.println("자격증 : "+employee3.getJa());
+		
+	}
+}

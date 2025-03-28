@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="animation1" class="com.lgy.spring_ex6_4.Animation">
+		<constructor-arg value="원피스"></constructor-arg>
+		<property name="year">
+			<value>1999</value>
+		</property>
+		<property name="character">
+			<list>
+				<value>루피</value>
+				<value>조로</value>
+				<value>상디</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="animationInfo1" class="com.lgy.spring_ex6_4.AnimationInfo">
+		<property name="animation">
+			<ref bean="animation1"/>
+		</property>
+	</bean>
+</beans>

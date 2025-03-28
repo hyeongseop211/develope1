@@ -1,0 +1,37 @@
+package com.lgy.spring_ex6_2;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class MainProfessor {
+	public static void main(String[] args) {
+
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+//		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:employeeCTX.xml");
+		String configLoc = "classpath:professorCTX.xml";
+		String configLoc2 = "classpath:professorCTX2.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc, configLoc2);
+		
+		Professor professor1 = ctx.getBean("professor1", Professor.class);
+		System.out.println("이름 : "+professor1.getName());
+		System.out.println("나이 : "+professor1.getAge());
+		System.out.println("과목 : "+professor1.getSubject());
+		System.out.println("===========================");
+		
+		ProfessorInfo professorInfo1 = ctx.getBean("professorInfo1", ProfessorInfo.class);
+		Professor professor2 = professorInfo1.getProfessor();
+		System.out.println("이름 : "+professor2.getName());
+		System.out.println("나이 : "+professor2.getAge());
+		System.out.println("과목 : "+professor2.getSubject());
+		System.out.println("===========================");
+		
+		Professor professor3 = ctx.getBean("professor3", Professor.class);
+		System.out.println("이름 : "+professor3.getName());
+		System.out.println("나이 : "+professor3.getAge());
+		System.out.println("과목 : "+professor3.getSubject());
+		
+	
+	}
+}
