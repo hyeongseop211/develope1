@@ -1,0 +1,41 @@
+package com.lgy.spring_ex6_4;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.lgy.spring_ex6_3.Singer;
+import com.lgy.spring_ex6_3.SingerInfo;
+
+public class MainAnimation {
+	public static void main(String[] args) {
+
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+//		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:employeeCTX.xml");
+		String configLoc = "classpath:animationCTX.xml";
+		String configLoc2 = "classpath:animationCTX2.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc, configLoc2);
+		
+		Animation animation1 = ctx.getBean("animation1", Animation.class);
+		System.out.println(animation1.getTitle());
+		System.out.println(animation1.getYear());
+		System.out.println(animation1.getCharacter());
+		System.out.println("===========================");
+		
+		AnimationInfo animationInfo1 = ctx.getBean("animationInfo1", AnimationInfo.class);
+		Animation animation2 = animationInfo1.getAnimation();
+		System.out.println(animation2.getTitle());
+		System.out.println(animation2.getYear());
+		System.out.println(animation2.getCharacter());
+		System.out.println("===========================");
+		
+		Animation animation3 = ctx.getBean("animation3", Animation.class);
+		System.out.println(animation3.getTitle());
+		System.out.println(animation3.getYear());
+		System.out.println(animation3.getCharacter());
+		
+	
+	
+	
+	}
+}

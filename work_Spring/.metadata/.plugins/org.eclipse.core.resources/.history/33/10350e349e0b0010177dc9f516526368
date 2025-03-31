@@ -1,0 +1,11 @@
+package com.lgy.spring_7_3;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainChampion {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
+		
+		ctx.close();
+	}
+}

@@ -1,0 +1,26 @@
+package com.lgy.spring_7_3;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainChampion {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+		ctx.load("classpath:applicationCTX.xml");
+//		스프링 설정(xml 스프링 설정파일 로딩)
+		ctx.refresh();
+//		INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationCTX.xml]
+//				INFO : org.springframework.context.support.GenericXmlApplicationContext - Refreshing org.springframework.context.support.GenericXmlApplicationContext@442675e1: startup date [Fri Mar 28 14:48:10 KST 2025]; root of context hierarchy
+//				INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2b4bac49: defining beans [champion1]; root of factory hierarchy
+//				챔피언 : 룰루
+//				티어 : 1
+//				INFO : org.springframework.context.support.GenericXmlApplicationContext - Closing org.springframework.context.support.GenericXmlApplicationContext@442675e1: startup date [Fri Mar 28 14:48:10 KST 2025]; root of context hierarchy
+//				INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2b4bac49: defining beans [champion1]; root of factory hierarchy
+// 		새로고침(설정 반영) : 생략해도 객체 정보 출력에는 문제 없음
+		Champion champion1 = ctx.getBean("champion1", Champion.class);
+		
+		System.out.println("챔피언 : "+champion1.getName());
+		System.out.println("티어 : "+champion1.getTier());
+		
+		ctx.close();
+	}
+}

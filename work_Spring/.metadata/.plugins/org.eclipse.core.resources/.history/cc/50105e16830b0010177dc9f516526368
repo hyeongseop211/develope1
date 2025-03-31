@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="singer1" class="spring_ex6_3.Singer">
+		<constructor-arg value="방탄소년단"></constructor-arg>
+		<property name="member">
+			<value>7</value>
+		</property>
+		<property name="song">
+			<list>
+				<value>다이너마이트</value>
+				<value>페이크 러브</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

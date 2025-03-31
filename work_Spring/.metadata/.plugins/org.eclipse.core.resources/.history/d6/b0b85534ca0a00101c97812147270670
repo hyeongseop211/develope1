@@ -1,0 +1,20 @@
+package com.lgy.Spring_ex3_4;
+
+public class MyWon2Dollar {
+	private Won2Dollar won2dollar;
+	private int money;
+	public Won2Dollar getWon2dollar() {
+		return won2dollar;
+	}
+	public void setWon2dollar(Won2Dollar won2dollar) {
+		this.won2dollar = won2dollar;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	
+}

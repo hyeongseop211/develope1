@@ -1,0 +1,16 @@
+package com.lgy.spring_ex11_3;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Itaewonclass {
+	@RequestMapping("actor")
+	public String lol2() {
+		return "lol2";
+	}
+	@RequestMapping("actress")
+	public String lol2() {
+		return "lol2";
+	}
+}

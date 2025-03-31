@@ -1,0 +1,21 @@
+package com.lgy.spring_5_2;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class Mainclass {
+	public static void main(String[] args) {
+
+		String configLoc = "classpath:application.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
+		
+		pencil6BWithEraser pencil1 = ctx.getBean("pencil1", pencil6BWithEraser.class);
+		pencil1.use();
+		
+		pencil6B pencil2 = ctx.getBean("pencil2", pencil6B.class);
+		
+		ctx.close();
+	}
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="Circle" class="com.lgy.Spring_ex3_1.Circle"></bean>
+
+<bean id="MyCircle" class="com.lgy.Spring_ex3_1.MyCircle">
+
+	<property name="circle">
+		<ref bean="Circle">
+	</property>
+
+</bean>
+
+</beans>

@@ -1,0 +1,23 @@
+package com.lgy.Spring_ex3_1;
+
+public class MyCircle {
+	private Circle circle;
+	private int radius;
+	public Circle getCircle() {
+		return circle;
+	}
+	public void setCircle(Circle circle) {
+		this.circle = circle;
+	}
+	public int getRadius() {
+		return radius;
+	}
+	public void setRadius(int radius) {
+		this.radius = radius;
+	}
+	
+	public double ar(double radius) {
+	    Circle circle = new Circle(radius); // Circle 객체 생성
+	    return circle.area(); // Circle 객체의 area 메소드 호출
+	}
+}

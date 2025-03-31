@@ -1,0 +1,25 @@
+package com.lgy.Spring_ex3_10;
+
+public class MyCapital {
+	private Capital capital;
+	private char endChar;
+	
+	public void alpha() {
+		capital.alphabet();
+	}
+	
+	public Capital getCapital() {
+		return capital;
+	}
+	public void setCapital(Capital capital) {
+		this.capital = capital;
+	}
+	public char getEndChar() {
+		return endChar;
+	}
+	public void setEndChar(char endChar) {
+		this.endChar = endChar;
+	}
+	
+	
+}

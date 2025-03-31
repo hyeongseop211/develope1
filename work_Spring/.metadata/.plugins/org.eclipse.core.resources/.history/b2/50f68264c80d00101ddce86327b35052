@@ -1,0 +1,7 @@
+package com.lgy.spring_ex9;
+
+public class water {
+	private String name;
+	private int rank;
+	
+}

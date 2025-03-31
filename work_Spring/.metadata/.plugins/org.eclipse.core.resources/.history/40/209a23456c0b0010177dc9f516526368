@@ -1,0 +1,8 @@
+package com.lgy.spring_6_1;
+
+public class Family {
+	private String papaName;
+	private String mamaName;
+	private String sisterName;
+	private String brotherName;
+}

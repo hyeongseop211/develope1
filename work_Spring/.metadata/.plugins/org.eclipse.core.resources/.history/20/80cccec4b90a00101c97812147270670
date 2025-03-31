@@ -1,0 +1,19 @@
+package com.lgy.Spring_ex3_2;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.lgy.Spring_ex3_1.MyCircle;
+
+public class MainRectangle {
+	public static void main(String[] args) {
+		
+String configLoc = "classpath:rectangleCTX.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
+		
+		MyRectangle myrectangle = ctx.getBean("myrectangle", MyRectangle.class);
+		
+		myrectangle.ar();
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<bean id="logAop" class="com.lgy.spring_ex9.LogAop"></bean>
+<!-- 	<aop:config> : aop 설정 -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:aspect id="logger" ref="logAop"> -->
+<!-- 			<aop:pointcut id="publicM" expression="within(com.lgy.spring_9_1.*)" /> -->
+<!-- 			<aop:around method="loggerAop" pointcut-ref="publicM"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+
+	<bean id="fire" class="com.lgy.spring_ex9.Fire">
+		<property name="name" value="파이리"></property>
+		<property name="Rank" value="1"></property>
+		<property name="skill" value="불대문자"></property>
+	</bean>
+	
+	<bean id="Water" class="com.lgy.spring_ex9.water">
+		<property name="name" value="꼬부기"></property>
+		<property name="rank" value="1"></property>
+	</bean>
+
+</beans>

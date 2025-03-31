@@ -1,0 +1,30 @@
+package com.lgy.spring_5_2;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class Mainclass {
+	public static void main(String[] args) {
+
+		String configLoc = "classpath:application.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
+//		6B연필에 지우개가 달린 연필입니다.
+//		pencil6BWithEraser pencil1 = ctx.getBean("pencil1", pencil6BWithEraser.class);
+//		pencil1.use();
+		
+//		6B 입니다.
+//		pencil6B pencil2 = ctx.getBean("pencil2", pencil6B.class);
+//		pencil2.use();
+//		
+//		4B 입니다.
+//		pencil4B pencil3 = ctx.getBean("pencil3", pencil4B.class);
+//		pencil3.use();
+		
+		Pencil pencil1 = ctx.getBean("pencil1", Pencil.class);
+		pencil1.use();
+		
+		ctx.close();
+	}
+}

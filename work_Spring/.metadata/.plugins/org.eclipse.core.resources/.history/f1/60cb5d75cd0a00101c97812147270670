@@ -1,0 +1,23 @@
+package com.lgy.Spring_ex3_6;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.lgy.Spring_ex3_5.MyThree;
+
+public class MainDivAndRemains {
+	public static void main(String[] args) {
+		
+String configLoc = "classpath:divAndRemainsCTX.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
+		
+		MyThree myThree = ctx.getBean("myThree", MyThree.class);
+		
+		myThree.pc();
+	
+	
+	
+		
+	}
+}

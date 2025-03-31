@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="logAop" class="com.lgy.spring_8_1.LogAop"></bean>
+<!-- 	<aop:config> : aop 설정 -->
+	<aop:config>
+<!-- 		aop:aspect : 공통기능 -->
+<!-- 		logger 참조변수가 공통기능을 가리킴 -->
+		<aop:aspect id="logger" ref="logAop">
+<!-- 			aop:pointcut : 핵심기능에 적용되는 부분(공통기능이->) -->
+<!-- 			com.lgy.spring_8_1.* : 패키지 안에 클래스의 메소드 모두 해당 -->
+			<aop:pointcut id="publicM" expression="within(com.lgy.spring_8_1.*)" />
+<!-- 			aop:around :핵심기능 메소드 실행 전/후 예외처리 발생시 공통기능(loggerAop) 실행 -->
+			<aop:around method="loggerAop" pointcut-ref="publicM"/>
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="champion" class="com.lgy.spring_9_1.Champion">
+		<property name="name" value="룰루"></property>
+		<property name="tier" value="1"></property>
+		<property name="length" value="2"></property>
+		<property name="win" value="68"></property>
+	</bean>
+	
+	<bean id="pokemon" class="com.lgy.spring_9_1.Pokemon">
+		<property name="name" value="피카츄"></property>
+		<property name="tier" value="1"></property>
+		<property name="skill" value="백만볼트"></property>
+	</bean>
+
+</beans>

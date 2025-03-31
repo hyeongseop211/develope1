@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="three" class="com.lgy.Spring_ex3_5.Three"></bean>
+
+<bean id="myThree" class="com.lgy.Spring_ex3_5.MyThree">
+	<property name="three">
+		<ref bean="three"/>
+	</property>
+	<property name="num"></property>
+</bean>
+
+</beans>

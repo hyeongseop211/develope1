@@ -1,0 +1,44 @@
+package com.lgy.spring_4_1;
+
+import java.util.ArrayList;
+
+public class MyInfo {
+	private String name;
+	private double height;
+	private double weight;
+	private ArrayList<String> hobbys;
+	private BMICaculator bmiCaculator;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public double getWeight() {
+		return weight;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	public ArrayList<String> getHobbys() {
+		return hobbys;
+	}
+	public void setHobbys(ArrayList<String> hobbys) {
+		this.hobbys = hobbys;
+	}
+	public BMICaculator getBmiCaculator() {
+		return bmiCaculator;
+	}
+	public void setBmiCaculator(BMICaculator bmiCaculator) {
+		this.bmiCaculator = bmiCaculator;
+	}
+	
+	
+}

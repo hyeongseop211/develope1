@@ -1,0 +1,36 @@
+package com.lgy.spring_7_2;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class OtherChampion {
+	private String name;
+	private int tier;
+
+	@PostConstruct
+	public void initMethod() {
+		System.out.println("@# initMethod()");
+	}
+	@PreDestroy
+	public void destroyMethod() {
+		System.out.println("@# destroyMethod()");
+	}
+	
+	public OtherChampion(String name, int tier) {
+		this.name = name;
+		this.tier = tier;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getTier() {
+		return tier;
+	}
+	public void setTier(int tier) {
+		this.tier = tier;
+	}
+	
+}

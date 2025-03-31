@@ -1,0 +1,10 @@
+package com.lgy.Spring_ex2_4;
+
+public class RectangleMedian {
+	public static void main(String[] args) {
+		Rectangle rec = new Rectangle();
+		rec.setX(150);
+		rec.setY(150);
+		
+	}
+}

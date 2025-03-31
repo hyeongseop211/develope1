@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="bmiCaculator" class="com.lgy.spring_4_1.BMICaculator">
+	<property name="lowWeight" value="18.5"></property>
+<!-- 	<property name="normal" value="23"></property> -->
+	<property name="normal">
+		<value>23</value>
+	</property>
+	<property name="overWeight" value="25"></property>
+	<property name="obesity" value="30"></property>
+</bean>
+
+</beans>

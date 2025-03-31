@@ -1,0 +1,34 @@
+package com.lgy.spring_8_1;
+
+public class Zerg {
+	private String name;
+	private int mineral;
+	private String skill;
+	
+	public void getZergInfo() {
+		System.out.println("이름 :"+getName());
+		System.out.println("티어 :"+getTier());
+		System.out.println("이름길이 :"+getLength());
+		System.out.println("승률 :"+getWin());
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getMineral() {
+		return mineral;
+	}
+	public void setMineral(int mineral) {
+		this.mineral = mineral;
+	}
+	public String getSkill() {
+		return skill;
+	}
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+	
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="professor1" class="com.lgy.spring_ex6_2.Professor">
+		<constructor-arg value="김교수"></constructor-arg>
+		<property name="age">
+			<value>33</value>
+		</property>
+		<property name="subject">
+			<list>
+				<value>자바</value>
+				<value>오라클</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="professorInfo1"  class="com.lgy.spring_ex6_2.ProfessorInfo">
+		<property name="professor">
+			<ref bean="professor1"/>
+		</property>
+	</bean>
+	
+</beans>

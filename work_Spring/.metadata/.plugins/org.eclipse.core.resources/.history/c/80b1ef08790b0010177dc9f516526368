@@ -1,0 +1,10 @@
+package com.lgy.spring_6_4;
+
+public class Snippet {
+	이름 : 홍길순
+	나이 : 30
+	취미 : [마라톤, 요리]
+	키 : 190.0
+	몸무게 : 70.0
+}
+

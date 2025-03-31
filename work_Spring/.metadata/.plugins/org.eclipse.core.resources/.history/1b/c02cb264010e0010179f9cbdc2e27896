@@ -1,0 +1,10 @@
+package com.lgy.spring_12_3;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+public class Member {
+	private String name;
+	private String id;
+	private String pw;
+	private String email;
+}

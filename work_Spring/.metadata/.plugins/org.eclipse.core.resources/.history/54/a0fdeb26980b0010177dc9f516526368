@@ -1,0 +1,16 @@
+package com.lgy.spring_7_1;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainChampion {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+		ctx.load("classpath:applicationCTX.xml");
+		Champion champion = ctx.getBean("champion", Champion.class);
+		
+		System.out.println("챔피언 : "+champion.getName());
+		System.out.println("티어 : "+champion.getTier());
+		
+		ctx.close();
+	}
+}

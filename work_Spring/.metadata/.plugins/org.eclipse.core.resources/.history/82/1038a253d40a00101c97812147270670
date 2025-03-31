@@ -1,0 +1,20 @@
+package com.lgy.Spring_ex3_9;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.lgy.Spring_ex3_8.MyMedian;
+
+public class MainEvenNumber {
+	public static void main(String[] args) {
+
+String configLoc = "classpath:evenNumberCTX.xml";
+		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
+		
+		MyEvenNumber myEvenNumber = ctx.getBean("myEvenNumber", MyEvenNumber.class);
+		
+		myEvenNumber.pc();
+	
+	}
+}

@@ -1,0 +1,12 @@
+package com.lgy.Spring_ex2_1;
+
+public class draw {
+	public static void main(String[] args) {
+		Circle circle = new Circle();
+		Rectangle rectangle = new Rectangle();
+		
+		circle.setBan(10);
+		rectangle.setGaro(20);
+		rectangle.setSero(20);
+	}
+}

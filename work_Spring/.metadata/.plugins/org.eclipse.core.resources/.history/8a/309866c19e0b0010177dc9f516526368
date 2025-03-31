@@ -1,0 +1,34 @@
+package com.lgy.spring_7_3;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainChampion {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
+		
+		Champion champion = ctx.getBean("champion", Champion.class);
+//		이름 : 룰루
+//		티어 : 1
+		System.out.println("이름 : "+champion.getName());
+		System.out.println("티어 : "+champion.getTier());
+		System.out.println("===========================");
+		
+		Champion champion2 = ctx.getBean("champion", Champion.class);
+//		이름 : 아펠리오스
+//		티어 : 6
+		champion2.setName("아펠리오스");
+		champion2.setTier(6);
+		System.out.println("이름 : "+champion.getName());
+		System.out.println("티어 : "+champion.getTier());
+		System.out.println("===========================");
+		
+		if (champion.equals(champion2)) {
+			System.out.println("champion == champion2");
+		} else {
+			System.out.println("champion != champion2");
+
+		}
+		
+		ctx.close();
+	}
+}

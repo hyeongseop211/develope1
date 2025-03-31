@@ -1,0 +1,19 @@
+package com.lgy.spring_ex5;
+
+public class Circle {
+	private double radius;
+
+	public void process() {
+		System.out.println("반지름 : "+radius);
+		System.out.println("원의 면적은 : "+3.14*radius*radius);
+	}
+	
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+	
+}

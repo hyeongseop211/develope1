@@ -1,0 +1,25 @@
+package spring_ex2_2;
+
+public class Season {
+	private int month;
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	
+	public void season() {
+		switch (month) {
+		int month =0;
+		case 3<=month:
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+package com.lgy.spring_8_1;
+
+// 공통기능 클래스(Aspect)
+public class LogAop {
+	public Object loggerAop() {
+		
+	}
+}

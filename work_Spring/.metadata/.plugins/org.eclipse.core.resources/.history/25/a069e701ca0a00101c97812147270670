@@ -1,0 +1,12 @@
+package com.lgy.Spring_ex3_4;
+
+public class Won2Dollar {
+	private int won;
+	public void exchange(int won) {
+		this.won = won;
+	}
+	
+	public void process() {
+		System.out.println("$"+won/1200.0);
+	}
+}

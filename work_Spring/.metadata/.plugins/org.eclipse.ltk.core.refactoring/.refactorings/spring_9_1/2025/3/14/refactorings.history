@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;applicationCTX.xml&apos; to &apos;spring_ex9/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;spring_9_1&apos;&#x0D;&#x0A;- Destination element: &apos;spring_ex9/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;applicationCTX.xml&apos;" description="Copy file" destination="=spring_ex9/src\/main\/resources" element1="src/main/resources/applicationCTX.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1743381617219" units="0" version="1.0"/>
+</session>

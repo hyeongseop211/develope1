@@ -1,0 +1,15 @@
+package com.lgy.Spring_ex3_6;
+
+public class DivAndRemains {
+
+	public void process(int num) {
+		int ten=num/10;
+		int one=num%10;
+		if (ten == one) {
+			System.out.println("10의 자리와 1의 자리가 같습니다.");
+		} else {
+			System.out.println("10의 자리와 1의 자리가 다릅니다.");
+
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee1" class="com.lgy.spring_ex6.Employee">
+		<constructor-arg value="임영웅"></constructor-arg>
+		<constructor-arg value="300"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>정보처리기사</value>
+				<value>sqlD</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="emplyeeInfo1" class="com.lgy.spring_ex6.EmplyeeInfo">
+		<property name="employee">
+			<ref bean="employee1"/>
+		</property>
+	</bean>
+
+</beans>
