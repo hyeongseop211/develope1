@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;views&apos;&#x0D;&#x0A;- Original project: &apos;spring_13_1&apos;&#x0D;&#x0A;- Destination element: &apos;views&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     index.jsp&#x0D;&#x0A;     student.jsp" description="Copy files" element1="src/main/webapp/WEB-INF/views/index.jsp" element2="src/main/webapp/WEB-INF/views/student.jsp" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1743470817075" target="/spring_13_1_2/src/main/webapp/WEB-INF/views" units="0" version="1.0"/>
+</session>

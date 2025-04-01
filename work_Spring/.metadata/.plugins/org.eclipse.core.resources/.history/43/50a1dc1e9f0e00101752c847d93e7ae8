@@ -1,0 +1,5 @@
+package com.lgy.spring_13_3;
+
+public class RedirectController {
+
+}

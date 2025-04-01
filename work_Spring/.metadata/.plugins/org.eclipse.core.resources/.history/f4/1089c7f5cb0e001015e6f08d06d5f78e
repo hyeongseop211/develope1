@@ -1,0 +1,16 @@
+package com.lgy.spring_14_1;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lgy.spring_14_1.domain.SampleVO;
+
+@Controller
+@RequestMapping("/smaple")
+public class SampleController {
+	@GetMapping(value = "/getSample")
+	public SampleVO getSample() {
+		return new SampleVO(112, "스타", "로드");
+	}
+}

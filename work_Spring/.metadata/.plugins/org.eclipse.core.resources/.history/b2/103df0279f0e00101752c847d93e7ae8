@@ -1,0 +1,12 @@
+package com.lgy.spring_13_3;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class RedirectController {
+	public String studentRedirect(HttpServletRequest httpServletRequest) {
+		String id = httpServletRequest.getParameter("id");
+	}
+}
