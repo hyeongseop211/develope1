@@ -1,0 +1,52 @@
+package com.lgy.member_oracle.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lgy.member_oracle.service.MemService;
+
+@Controller
+public class MemController {
+
+
+	MemService service;
+	
+//	아이디 조회
+	@RequestMapping("/member_view")
+	public String member_view(Model model) {
+		
+		service=new MemService() {
+			
+			public void excute(Model model) {
+				
+			}
+		};
+		service.excute(model);
+		
+		return "member_view";
+	}
+//	상품 등록
+	@RequestMapping("/write_id")
+	public String write(HttpServletRequest request, Model model) {
+		log.info("@# write_result()");
+		
+		model.addAttribute("request", request);
+		
+		service=new MemService();
+		service.excute(model);
+		
+		return "write_result";
+	}
+	
+	@RequestMapping("/write_view")
+	public String write_view() {
+		log.info("@# write_view()");
+		
+		return "item_write";
+	}
+	
+
+}

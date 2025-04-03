@@ -1,0 +1,17 @@
+package com.lgy.item_oracle.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lgy.item_oracle.service.ItemService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class ItemController {
+	ItemService service;
+	
+//	 상품 등록
+		@RequestMapping("/item_write")
+}

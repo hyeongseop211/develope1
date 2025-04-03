@@ -1,0 +1,5 @@
+package com.lgy.board_jdbc_mysql.util;
+
+public class Constant {
+
+}

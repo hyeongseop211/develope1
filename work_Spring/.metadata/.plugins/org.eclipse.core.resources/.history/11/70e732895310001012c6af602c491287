@@ -1,0 +1,10 @@
+package com.lgy.member_oracle.service;
+
+import org.springframework.ui.Model;
+
+import com.lgy.member_oracle.DTO.MemDTO;
+
+
+public interface MemService {
+	public int excute(Model model);
+}

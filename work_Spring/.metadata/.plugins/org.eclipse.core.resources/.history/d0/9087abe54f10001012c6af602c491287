@@ -1,0 +1,19 @@
+package com.lgy.member_oracle.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import com.lgy.member_oracle.DAO.MemDAO;
+import com.lgy.member_oracle.DTO.MemDTO;
+
+@Service
+public class MemLoginService implements MemService{
+	
+
+	@Override
+	public void excute(Model model) {
+		// TODO Auto-generated method stub
+		
+	}
+}

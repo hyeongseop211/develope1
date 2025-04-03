@@ -1,0 +1,5 @@
+package com.lgy.item_jdbc_oracle.util;
+
+public class Constant {
+
+}

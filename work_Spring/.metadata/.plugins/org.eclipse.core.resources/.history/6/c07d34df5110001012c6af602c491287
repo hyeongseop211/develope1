@@ -1,0 +1,140 @@
+package com.lgy.member_oracle.DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.lgy.member_oracle.DTO.MemDTO;
+
+@Repository
+public class MemDAO {
+
+	@Autowired
+	private DataSource dataSource;
+
+	// 로그인 체크 (아이디, 비밀번호 확인)
+	public MemDTO loginCheck(String mem_uid, String mem_pwd) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MemDTO member = null;
+
+		String sql = "SELECT * FROM MVC_MEMBER WHERE mem_uid = ? AND mem_pwd = ?";
+
+		try {
+			conn = dataSource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mem_uid);
+			pstmt.setString(2, mem_pwd);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				member = new MemDTO(mem_uid, mem_pwd, sql);
+				member.setMem_uid(rs.getString("mem_uid"));
+				member.setMem_pwd(rs.getString("mem_pwd"));
+				member.setMem_name(rs.getString("mem_name"));
+				// 필요한 경우 다른 필드도 설정
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+
+		return member;
+	}
+
+	// 아이디만 체크하는 메소드
+	public boolean checkId() {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean result = false;
+
+		String sql = "SELECT COUNT(*) FROM MVC_MEMBER WHERE mem_uid = ?";
+
+		try {
+			conn = dataSource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			String dto = null;
+			pstmt.setString(1, dto);
+			rs = pstmt.executeQuery();
+
+			if (rs.next() && rs.getInt(1) > 0) {
+				result = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+
+		return result;
+	}
+
+	// 회원 정보 가져오기
+	public MemDTO getMemDTO(String mem_uid) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        MemDTO member = null;
+        
+        String sql = "SELECT * FROM MVC_MEMBER WHERE mem_uid = ?";
+        
+        try {
+            conn = dataSource.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, mem_uid);
+            rs = pstmt.executeQuery();
+            
+            if (rs.next()) {
+                member = new MemDTO(mem_uid, sql, sql);
+                member.setMem_uid(rs.getString("mem_uid"));
+                member.setMem_pwd(rs.getString("mem_pwd"));
+                member.setMem_name(rs.getString("mem_name"));
+                // 필요한 경우 다른 필드도 설정
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+                if (conn != null) conn.close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+        
+        return member;
+    }
+}

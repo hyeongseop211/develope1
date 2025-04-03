@@ -2,22 +2,34 @@
 <aop-reference-model>
 <aop-project name="spring_11_1"/>
 <aop-project name="spring_11_5"/>
-<aop-project name="spring_6_1"/>
+<aop-project name="spring_12_4"/>
+<aop-project name="spring_13_3"/>
 <aop-project name="spring_5_2"/>
+<aop-project name="spring_6_1"/>
+<aop-project name="spring_ex11_4"/>
 <aop-project name="spring_10_1"/>
 <aop-project name="spring_11_4"/>
-<aop-project name="spring_test"/>
+<aop-project name="spring_12_3"/>
+<aop-project name="spring_13_2"/>
+<aop-project name="spring_14_1"/>
 <aop-project name="spring_5_1"/>
 <aop-project name="spring_6_4"/>
 <aop-project name="spring_7_3"/>
+<aop-project name="spring_test"/>
+<aop-project name="member_oracle"/>
 <aop-project name="spring_9_1"/>
+<aop-project name="item_oracle"/>
+<aop-project name="spring_ex11_3"/>
 <aop-project name="spring_ex6"/>
+<aop-project name="spring_13_1_2"/>
 <aop-project name="Spring_2_1"/>
 <aop-project name="spring_11_3"/>
-<aop-project name="spring_6_3"/>
-<aop-project name="spring_7_2"/>
+<aop-project name="spring_12_2"/>
+<aop-project name="spring_13_1"/>
 <aop-project name="spring_3_2"/>
 <aop-project name="spring_4_1"/>
+<aop-project name="spring_6_3"/>
+<aop-project name="spring_7_2"/>
 <aop-project name="spring_8_1">
 <aspect-definition advice-class-name="com.lgy.spring_8_1.LogAop" advice-method-name="loggerAop" advice-type="AROUND" aspect-end-line-number="18" aspect-name="logAop" aspect-start-line-number="18" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/spring_8_1/src/main/resources/applicationCTX.xml" pointcut-expression="within(com.lgy.spring_8_1.*)" proxy-target-class="false">
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_8_1|3:src/main/resources/applicationCTX.xml|7:beans:6|8:champion:22" bean-file="/spring_8_1/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_8_1/src/main/resources/applicationCTX.xml" source="=spring_8_1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_8_1{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="10" target="=spring_8_1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_8_1{Champion.java[Champion~getChampionInfo" target-start-line="9"/>
@@ -39,19 +51,22 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="spring_ex11_1a"/>
+<aop-project name="spring_ex11_2"/>
+<aop-project name="board_mysql"/>
 <aop-project name="Spring_ex3"/>
 <aop-project name="spring_ex5"/>
 <aop-project name="spring_ex9"/>
 <aop-project name="spring_11_2"/>
 <aop-project name="spring_11_6"/>
+<aop-project name="spring_12_1"/>
+<aop-project name="spring_3_1"/>
 <aop-project name="spring_6_2"/>
 <aop-project name="spring_7_1"/>
-<aop-project name="spring_3_1"/>
 <aop-project name="spring_ex11_1"/>
 <aop-project name="spring_ex8">
 <aspect-definition advice-class-name="com.lgy.spring_ex8.LogAop" advice-method-name="loggerAop" advice-type="AROUND" aspect-end-line-number="18" aspect-name="logAop" aspect-start-line-number="18" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" pointcut-expression="within(com.lgy.spring_ex8.*)" proxy-target-class="false">
-<aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~setAge~I" target-start-line="29"/>
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~getAge" target-start-line="26"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~setAge~I" target-start-line="29"/>
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~getName" target-start-line="14"/>
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~getProfessorInfo" target-start-line="8"/>
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring_ex8|3:src/main/resources/applicationCTX.xml|7:beans:6|8:professor:22" bean-file="/spring_ex8/src/main/resources/applicationCTX.xml" bean-start-line="22" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring_ex8/src/main/resources/applicationCTX.xml" source="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{LogAop.java[LogAop~loggerAop~QProceedingJoinPoint;" source-start-line="7" target="=spring_ex8/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lgy.spring_ex8{Professor.java[Professor~setSubject~QString;" target-start-line="23"/>

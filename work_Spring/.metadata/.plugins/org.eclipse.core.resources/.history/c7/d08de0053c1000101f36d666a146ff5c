@@ -1,0 +1,59 @@
+package com.lgy.item_oracle.controller;
+
+import java.security.Provider.Service;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lgy.item_oracle.service.ItemService;
+import com.lgy.item_oracle.service.ItemWriteService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class ItemController {
+	ItemService service;
+	
+//	 상품 등록
+		@RequestMapping("/item_write")
+		public String itemW(Model model) {
+			log.info("@# itemW()");
+			
+			service = new ItemWriteService();
+			service.excute(model);
+			
+			return "item_write";
+		}
+		
+		@RequestMapping("/content_view")
+		public String content(HttpServletRequest request, Model model) {
+			log.info("@# content()");
+			
+			model.addAttribute("request", request);
+			
+			service = new ItemWriteService();
+			service.excute(model);
+			
+			return "content_view";
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

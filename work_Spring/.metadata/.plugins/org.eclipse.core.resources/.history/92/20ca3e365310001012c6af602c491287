@@ -1,0 +1,29 @@
+package com.lgy.member_oracle.service;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import com.lgy.member_oracle.DAO.MemDAO;
+import com.lgy.member_oracle.DTO.MemDTO;
+
+@Service
+public class MemLoginService implements MemService{
+	
+	@Override
+	public void excute(Model model) {
+		Map<String, Object> map = model.asMap();
+		HttpServletRequest request = (HttpServletRequest) map.get("request");
+		
+		String mId = request.getParameter("mem_uid");
+		String mPw = request.getParameter("mem_pwd");
+		String description = request.getParameter("description");
+		
+		MemDAO dao=new ItemDAO();
+		dao.write(name, price, description);
+	}
+
+}

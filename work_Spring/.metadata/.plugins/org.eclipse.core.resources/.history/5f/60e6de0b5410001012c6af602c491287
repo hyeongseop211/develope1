@@ -1,0 +1,52 @@
+package com.lgy.member_oracle.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.lgy.member_oracle.DTO.MemDTO;
+import com.lgy.member_oracle.service.MemLoginService;
+import com.lgy.member_oracle.service.MemService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class MemController {
+
+	MemService service;
+	
+//	로그인 화면 이동
+	@RequestMapping("/login")
+	public String login(Model model) {
+		log.info("@# login()");
+		
+		return "login";
+	}
+//	상품 등록
+	@RequestMapping("/write_result")
+	public String write(HttpServletRequest request, Model model) {
+		log.info("@# write_result()");
+		
+		model.addAttribute("request", request);
+		
+		service=new ItemWriteService();
+		service.excute(model);
+		
+		return "write_result";
+	}
+	
+	@RequestMapping("/write_view")
+	public String write_view() {
+		log.info("@# write_view()");
+		
+		return "item_write";
+	}
+	
+}

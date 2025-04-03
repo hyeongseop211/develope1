@@ -1,0 +1,64 @@
+package com.lgy.member_oracle.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.lgy.member_oracle.DTO.MemDTO;
+import com.lgy.member_oracle.service.MemLoginService;
+import com.lgy.member_oracle.service.MemService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class MemController {
+	
+	MemService service;
+
+//	아이디 조회
+	@RequestMapping("/login")
+	public String loginForm(Model model) {
+		log.info("@# login");
+		
+		service= new MemLoginService();
+		service.excute(model);
+			
+		return "login";
+	}
+	 // 로그인 처리
+    @RequestMapping("/login_result")
+    public ModelAndView loginProcess(HttpServletRequest request, Model model) {
+        ModelAndView mav = new ModelAndView();
+        
+        // 로그인 서비스 호출
+        MemDTO loginUser = MemService.login(dto);
+        
+        if(loginUser != null) {
+            // 로그인 성공 시 세션에 사용자 정보 저장
+            session.setAttribute("loginUser", loginUser);
+            mav.setViewName("login_ok");
+        } else {
+            // 로그인 실패 시 에러 메시지와 함께 로그인 페이지로 이동
+            mav.addObject("message", "아이디 또는 비밀번호가 일치하지 않습니다.");
+            mav.setViewName("login");
+        }
+        
+        return mav;
+    }
+	
+ // 로그아웃 처리
+    @RequestMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/login";
+    }
+	
+
+}

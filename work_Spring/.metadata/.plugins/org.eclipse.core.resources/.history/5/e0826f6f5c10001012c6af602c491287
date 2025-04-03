@@ -1,0 +1,70 @@
+package com.lgy.board_jdbc_mysql.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class BoardController {
+
+//	BoardService service;
+	
+	@RequestMapping("/list")
+	public String list(Model model) {
+		log.info("@# list()");
+		
+		service=new BoardListService();
+		service.excute(model);
+		
+		return "list";
+	}
+	
+	@RequestMapping("/write")
+	public String write(HttpServletRequest request, Model model) {
+		log.info("@# write()");
+		
+		model.addAttribute("request", request);
+		
+		service=new BoardWriteService();
+		service.excute(model);
+		
+		return "redirect:list";
+	}
+	
+	@RequestMapping("/write_view")
+	public String write_view() {
+		log.info("@# write_view()");
+		
+		return "write_view";
+	}
+	
+	@RequestMapping("/content_view")
+	public String content_view(HttpServletRequest request, Model model) {
+		log.info("@# content_view()");
+		
+		model.addAttribute("request", request);
+		
+		service=new BoardContentService();
+		service.excute(model);
+		
+		return "content_view";
+	}
+	
+	@RequestMapping("/modify")
+	public String modify(HttpServletRequest request, Model model) {
+		log.info("@# modify()");
+		
+		model.addAttribute("request", request);
+		
+		service=new BoardModifyService();
+		service.excute(model);
+		
+		return "redirect:list";
+	}
+
+}
