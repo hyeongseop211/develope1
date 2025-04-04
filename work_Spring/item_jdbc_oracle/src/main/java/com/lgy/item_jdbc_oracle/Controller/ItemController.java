@@ -8,9 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.lgy.item_jdbc_oracle.service.ItemContentService;
-import com.lgy.item_jdbc_oracle.service.ItemService;
-import com.lgy.item_jdbc_oracle.service.ItemWriteService;
+import com.lgy.item_jdbc_oracle.Service.ItemContentService;
+import com.lgy.item_jdbc_oracle.Service.ItemService;
+import com.lgy.item_jdbc_oracle.Service.ItemWriteService;
+import com.lgy.item_jdbc_oracle.util.Constant;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,7 +20,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ItemController {
 
-	com.lgy.item_jdbc_oracle.Service.ItemService service;
+	ItemService service;
+	public JdbcTemplate template;
+	
+	@Autowired
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+		Constant.template = this.template;
+	}
 	
 //	상품 목록 조회
 	@RequestMapping("/content_view")

@@ -25,10 +25,10 @@
 	
 	<beans:bean name="dataSource"
 	class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<beans:property name="url" value="jdbc:mysql://localhost:3306/atom"/>
-		<beans:property name="username" value="bts"/>
-		<beans:property name="password" value="1234"/>
+		<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<beans:property name="username" value="scott"/>
+		<beans:property name="password" value="tiger"/>
 	</beans:bean>
 	
 	<!-- JdbcTemplate 객체에 dataSource 객체를 포함 -->
