@@ -10,12 +10,12 @@
 <title>도서 추천</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" type="text/css"
+	href="/pilotpjt/resources/css/user_book_recommend.css">
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
 	rel="stylesheet">
 <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="/pilotpjt/resources/css/user_book_recommend.css">
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -27,7 +27,7 @@
 					<span class="title-icon"><i class="fas fa-book-reader"></i></span>
 					<span class="title-text">맞춤 도서 추천 시스템</span>
 				</h1>
-				<p class="recommendation-subtitle">${loginUser.userName}님의관심
+				<p class="recommendation-subtitle">${loginUser.userName}님의 관심
 					카테고리와 인기 도서를 기반으로 추천해드립니다.</p>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book1.png" alt="책1"
-							style="width: 100%; height: 80%; object-fit: contain;">
+							style="width: 100%; height: 75%; object-fit: contain;">
 						<div class="book-info">
 							<div class="info-row">
 								<div class="book-title">제목 : 머리부터 천천히</div>
@@ -61,7 +61,7 @@
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book2.png" alt="책2"
-							style="width: 100%; height: 80%; object-fit: contain;">
+							style="width: 100%; height: 75%; object-fit: contain;">
 						<div class="book-info">
 							<div class="info-row">
 								<div class="book-title">제목 : 첫 숨</div>
@@ -75,7 +75,7 @@
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book3.png" alt="책3"
-							style="width: 100%; height: 80%; object-fit: contain;">
+							style="width: 100%; height: 75%; object-fit: contain;">
 						<div class="book-info">
 							<div class="info-row">
 								<div class="book-title">제목 : 애니</div>
@@ -96,7 +96,7 @@
 					<span class="title-icon"><i class="fas fa-bookmark"></i></span> <span
 						class="title-text">${topMajorCategory} 당신을 위한 추천</span>
 				</h2>
-				<p class="form-description">${loginUser.userName}님이가장 많이 읽은 주요
+				<p class="form-description">${loginUser.userName}님이 가장 많이 읽은 주요
 					카테고리 기반 추천 도서입니다.</p>
 			</div>
 
@@ -105,31 +105,31 @@
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book4.png" alt="책4"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book5.png" alt="책5"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book6.png" alt="책6"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book7.png" alt="책7"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book8.png" alt="책8"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<%--                 </c:forEach> --%>
@@ -143,7 +143,7 @@
 					<span class="title-icon"><i class="fas fa-tags"></i></span> <span
 						class="title-text">${topSubCategory} 이런 건 어떠세요</span>
 				</h2>
-				<p class="form-description">${loginUser.userName}님이관심이있을수도 있는
+				<p class="form-description">${loginUser.userName}님이 관심이 있을 수도 있는
 					책리스트 입니다.</p>
 			</div>
 
@@ -152,31 +152,31 @@
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book9.png" alt="책9"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book10.png" alt="책10"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book11.png" alt="책11"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book12.png" alt="책12"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<div class="book-card">
 					<div class="book-cover">
 						<img src="../pilotpjt/resources/images/book13.png" alt="책13"
-							style="width: 100%; height: 100%; object-fit: cover;">
+							style="width: 100%; height: 101%; object-fit: cover;">
 					</div>
 				</div>
 				<%-- 				</c:forEach> --%>
