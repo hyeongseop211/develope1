@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BootMemberApplication",
+            "request": "launch",
+            "mainClass": "com.boot.BootMemberApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BootBoard250421Application<boot_board_250421>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.boot.BootBoard250421Application",
+            "projectName": "boot_board_250421",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62180 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=boot_board_250421"
+        }
+    ]
+}
