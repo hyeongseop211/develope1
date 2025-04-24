@@ -1,0 +1,65 @@
+delete from tbl_board;
+select * from tbl_board;
+desc tbl_board;
+drop table tbl_board;
+
+CREATE TABLE tbl_board (
+    boardNo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    boardName VARCHAR(20),
+    boardTitle VARCHAR(100),
+    boardContent VARCHAR(300),
+    boardDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    boardHit INT DEFAULT 0
+);
+
+delimiter //
+create procedure paging_insert(v_count INT)
+begin
+	declare name varchar(20);
+	declare title varchar(20);
+	declare i int;
+    set i=1;
+    while i<=v_count do 
+		if i mod 2 = 0 then
+			set name = concat('kim',i);
+			set title = 'apple';
+		elseif i mod 3 = 0 then
+			set name = concat('park',i);
+			set title = 'google';
+		elseif i mod 5 = 0 then
+			set name = concat('hong',i);
+			set title = 'nvidia';
+		else
+			set name = concat('shin',i);
+			set title = 'tesla';
+		end if;
+        insert into tbl_board value(i, name, concat(i, title), concat('content_', i), now(), 0);
+        set i=i+1;
+    end while;
+end;
+
+-- 1page (300~291)
+select boardNo, boardName, boardTitle, boardContent, boardDate, boardHit from (
+	select rownum, boardNo, boardName, boardTitle, boardContent, boardDate, boardHit
+		from (select row_number() over(order by boardNo desc) as rownum
+				, boardNo, boardName, boardTitle, boardContent, boardDate, boardHit
+			from tbl_board
+			order by boardNo desc
+			) a
+		where rownum <= (1*10)
+	) aa
+    where rownum > (0*10);
+
+-- 2page (290~281)
+select * from (
+	select rownum,  boardNo, boardName, boardTitle, boardContent, boardDate, boardHit
+		from (select row_number() over(order by boardNo desc) as rownum
+				, boardNo, boardName, boardTitle, boardContent, boardDate, boardHit
+			from tbl_board
+			order by boardNo desc
+			) a
+		where rownum <= (2*10)
+	) aa
+    where rownum > (1*10);
+
+call paging_insert(300);
