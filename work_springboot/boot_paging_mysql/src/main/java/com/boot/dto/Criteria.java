@@ -2,15 +2,16 @@ package com.boot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-// @NoArgsConstructor
+//@NoArgsConstructor
 public class Criteria {
-	private int pageNum;//현재 페이지 번호
-	private int amount;//한 페이지당 보여줄 게시글 수
+	private int pageNum;//페이지 번호
+	private int amount;//페이지당 글 갯수
 	
 	public Criteria() {
-        this(1,10);
+		this(1, 10);
 	}
 }

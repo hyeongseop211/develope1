@@ -30,7 +30,8 @@
 				<td>
 <%-- 					${dto.boardTitle} --%>
 <!-- 			content_view : 컨트롤러단 호출 -->
-					<a href="content_view?boardNo=${dto.boardNo}">${dto.boardTitle}</a>
+					<!-- <a href="content_view?boardNo=${dto.boardNo}">${dto.boardTitle}</a> -->
+					<a class="move_link" href="content_view?boardNo=${dto.boardNo}">${dto.boardTitle}</a>
 				</td>
 				<td>${dto.boardDate}</td>
 				<td>${dto.boardHit}</td>
@@ -76,14 +77,37 @@
 			</ul>
 		</div>
 	
+		<form id="actionForm" action="list" method="get">
+			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+			<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
+		</form>
 </body>
 </html>
 <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <script>
+	var actionForm = $("#actionForm");
 	// 페이지번호 처리
 	$(".paginate_button a").on("click", function(e){
 		e.preventDefault();
 		console.log("click");
 		console.log("@# href=>"+$(this).attr("href"));
+
+		// 버그 처리
+		actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+		actionForm.submit();
 	});//end of paginate_button click
+
+	// 게시글 처리
+	$(".move_link").on("click", function(e){
+		e.preventDefault();
+		
+		console.log("move_link click");
+		console.log("@# href=>"+$(this).attr("href"));
+
+		var targetBno = $(this).attr("href");
+		// "content_view?boardNo=${dto.boarNo}" 를 actionForm으로 처리
+		actionForm.append("<input type='hidden' name='boardNo' value='"+targetBno+"'>");
+		// actionForm.submit();
+		actionForm.attr("action", "content_view").submit();
+	});
 </script>

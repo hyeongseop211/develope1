@@ -4,9 +4,9 @@
 
 <mapper namespace="com.boot.dao.PageDAO">
 
-    <!-- <![CDATA[]]> : mybatis에서 특수문자 인식 처리 -->
+<!-- <![CDATA[]]> : mybatis 에서 특수문자 인식 처리 -->
     <select id="listWithPaging" resultType="com.boot.dto.BoardDTO">
-       <![CDATA[
+    	<![CDATA[
 		  select boardNo, boardName, boardTitle, boardContent, boardDate, boardHit
 			from ( select rownum , boardNo, boardName, boardTitle, boardContent, boardDate, boardHit 
 					 from ( select row_number() over(order by boardNo desc) as rownum
@@ -19,5 +19,12 @@
 			where rownum > (#{pageNum}-1) * #{amount}
 		]]>
     </select>
-
+    
+    <select id="getTotalCount" resultType="int">
+		  select count(*) from tbl_board
+    </select>
+    
 </mapper>
+
+
+
