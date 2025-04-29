@@ -1,0 +1,149 @@
+{
+    "사상(서부터미널)": {
+        "stationCode": "1",
+        "line": "부산김해경전철",
+        "districtCode": "26530",
+        "latitude": 35.1626895550862,
+        "longitude": 128.984408359544
+    },
+    "괘법르네시떼": {
+        "stationCode": "2",
+        "line": "부산김해경전철",
+        "districtCode": "26530",
+        "latitude": 35.1632721941138,
+        "longitude": 128.977658179095
+    },
+    "서부산유통지구": {
+        "stationCode": "3",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.1663703106116,
+        "longitude": 128.954910864535
+    },
+    "공항": {
+        "stationCode": "4",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.14407609242912,
+        "longitude": 126.81163183518822
+    },
+    "덕두": {
+        "stationCode": "5",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.181994167427,
+        "longitude": 128.95417861657
+    },
+    "등구": {
+        "stationCode": "6",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.196153352934,
+        "longitude": 128.963542041197
+    },
+    "대저": {
+        "stationCode": "7",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.2130452646571,
+        "longitude": 128.960632678445
+    },
+    "평강": {
+        "stationCode": "8",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.2140387478609,
+        "longitude": 128.950681581985
+    },
+    "대사": {
+        "stationCode": "9",
+        "line": "부산김해경전철",
+        "districtCode": "26440",
+        "latitude": 35.2176967415322,
+        "longitude": 128.938390945621
+    },
+    "불암": {
+        "stationCode": "10",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.222144212820545,
+        "longitude": 128.92783103353437
+    },
+    "지내": {
+        "stationCode": "11",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2274754567937,
+        "longitude": 128.923761776687
+    },
+    "김해대학(안동)": {
+        "stationCode": "12",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.22899663473,
+        "longitude": 128.915582461774
+    },
+    "인제대(활천)": {
+        "stationCode": "13",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.228130760436,
+        "longitude": 128.901688578174
+    },
+    "김해시청": {
+        "stationCode": "14",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2271218680623,
+        "longitude": 128.890387960522
+    },
+    "부원": {
+        "stationCode": "15",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2264942365647,
+        "longitude": 128.883941949222
+    },
+    "봉황": {
+        "stationCode": "16",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2272823463239,
+        "longitude": 128.8742777452
+    },
+    "수로왕릉": {
+        "stationCode": "17",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2328195086945,
+        "longitude": 128.872164496608
+    },
+    "박물관": {
+        "stationCode": "18",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2400585220082,
+        "longitude": 128.871887125462
+    },
+    "연지공원": {
+        "stationCode": "19",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.2496404839021,
+        "longitude": 128.869286266039
+    },
+    "장신대": {
+        "stationCode": "20",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 37.5452991715677,
+        "longitude": 127.103521464507
+    },
+    "가야대(삼계)": {
+        "stationCode": "21",
+        "line": "부산김해경전철",
+        "districtCode": "48250",
+        "latitude": 35.26970088737156,
+        "longitude": 128.8726612804808
+    }
+}

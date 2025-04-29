@@ -1,0 +1,142 @@
+{
+    "녹동": {
+        "stationCode": "100",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.106787076597,
+        "longitude": 126.93399541177
+    },
+    "소태": {
+        "stationCode": "101",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.1233388911729,
+        "longitude": 126.932411042605
+    },
+    "학동증심사입구": {
+        "stationCode": "102",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.1327288057728,
+        "longitude": 126.928405063266
+    },
+    "남광주": {
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.1393018227168,
+        "longitude": 126.922978672689
+    },
+    "문화전당": {
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.1465972550305,
+        "longitude": 126.919903490043
+    },
+    "금남로4가": {
+        "stationCode": "105",
+        "line": "1호선",
+        "districtCode": "29110",
+        "latitude": 35.150725420206,
+        "longitude": 126.914526339474
+    },
+    "금남로5가": {
+        "stationCode": "106",
+        "line": "1호선",
+        "districtCode": "29170",
+        "latitude": 35.15419277418956,
+        "longitude": 126.90931949178001
+    },
+    "양동시장": {
+        "stationCode": "107",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 35.1543243970299,
+        "longitude": 126.901277990948
+    },
+    "돌고개": {
+        "stationCode": "108",
+        "line": "1호선",
+        "districtCode": "29155",
+        "latitude": 35.151662750226315,
+        "longitude": 126.89493020259164
+    },
+    "농성": {
+        "stationCode": "109",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 35.15328307708562,
+        "longitude": 126.88372612030611
+    },
+    "화정": {
+        "stationCode": "110",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 37.6346440058753,
+        "longitude": 126.832688422366
+    },
+    "쌍촌": {
+        "stationCode": "111",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 35.15159570722761,
+        "longitude": 126.86953837305741
+    },
+    "운천": {
+        "stationCode": "112",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 37.8798512036962,
+        "longitude": 126.769908998666
+    },
+    "상무": {
+        "stationCode": "113",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 35.1466624736265,
+        "longitude": 126.848542149637
+    },
+    "김대중컨벤션센터": {
+        "stationCode": "114",
+        "line": "1호선",
+        "districtCode": "29140",
+        "latitude": 35.1432572303967,
+        "longitude": 126.841569332512
+    },
+    "공항": {
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "29200",
+        "latitude": 35.14407609242912,
+        "longitude": 126.81163183518822
+    },
+    "송정공원": {
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "29200",
+        "latitude": 35.14354984173234,
+        "longitude": 126.79936687021848
+    },
+    "광주송정역": {
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "29200",
+        "latitude": 35.13749210013527,
+        "longitude": 126.7915362644601
+    },
+    "도산": {
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "29200",
+        "latitude": 35.131776733914876,
+        "longitude": 126.78799483393821
+    },
+    "평동": {
+        "stationCode": "119",
+        "line": "1호선",
+        "districtCode": "29200",
+        "latitude": 35.1247287298032,
+        "longitude": 126.769582969722
+    }
+}

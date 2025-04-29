@@ -1,0 +1,156 @@
+{
+    "판암": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "101",
+        "line": "1호선",
+        "districtCode": "30110"
+    },
+    "신흥": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "102",
+        "line": "1호선",
+        "districtCode": "30110"
+    },
+    "대동": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "30110"
+    },
+    "대전": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "30110"
+    },
+    "중앙로": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "105",
+        "line": "1호선",
+        "districtCode": "30140"
+    },
+    "중구청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "106",
+        "line": "1호선",
+        "districtCode": "30140"
+    },
+    "서대전네거리": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "107",
+        "line": "1호선",
+        "districtCode": "30140"
+    },
+    "오룡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "108",
+        "line": "1호선",
+        "districtCode": "30140"
+    },
+    "용문": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "109",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "탄방": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "110",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "시청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "111",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "정부청사": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "112",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "갈마": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "113",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "월평": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "114",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "갑천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "30170"
+    },
+    "유성온천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "구암": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "현충원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "월드컵경기장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "119",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "노은": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "120",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "지족": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "121",
+        "line": "1호선",
+        "districtCode": "30200"
+    },
+    "반석": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "122",
+        "line": "1호선",
+        "districtCode": "30200"
+    }
+}

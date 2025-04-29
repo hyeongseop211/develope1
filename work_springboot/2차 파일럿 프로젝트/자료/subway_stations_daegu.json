@@ -1,0 +1,688 @@
+{
+    "설화명곡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "27710"
+    },
+    "화원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "27710"
+    },
+    "대곡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "진천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "월배": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "119",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "상인": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "120",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "월촌": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "121",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "송현": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "122",
+        "line": "1호선",
+        "districtCode": "27290"
+    },
+    "서부정류장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "123",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "대명": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "124",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "안지랑": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "125",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "현충로": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "126",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "영대병원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "127",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "교대": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "128",
+        "line": "1호선",
+        "districtCode": "27200"
+    },
+    "명덕": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "129",
+        "line": "1호선",
+        "districtCode": "27110"
+    },
+    "반월당": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "130",
+        "line": "1호선",
+        "districtCode": "27110"
+    },
+    "중앙로": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "131",
+        "line": "1호선",
+        "districtCode": "27110"
+    },
+    "대구역": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "132",
+        "line": "1호선",
+        "districtCode": "27230"
+    },
+    "칠성시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "133",
+        "line": "1호선",
+        "districtCode": "27230"
+    },
+    "신천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "134",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "동대구역": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "135",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "동구청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "136",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "아양교": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "137",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "동촌": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "138",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "해안": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "139",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "방촌": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "140",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "용계": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "141",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "율하": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "142",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "신기": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "143",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "반야월": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "144",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "각산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "145",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "안심": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "146",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "대구한의대병원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "147",
+        "line": "1호선",
+        "districtCode": "27140"
+    },
+    "부호": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "148",
+        "line": "1호선",
+        "districtCode": "47290"
+    },
+    "하양": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "149",
+        "line": "1호선",
+        "districtCode": "47290"
+    },
+    "문양": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "216",
+        "line": "2호선",
+        "districtCode": "27710"
+    },
+    "다사": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "217",
+        "line": "2호선",
+        "districtCode": "27710"
+    },
+    "대실": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "218",
+        "line": "2호선",
+        "districtCode": "27710"
+    },
+    "강창": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "219",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "계명대": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "220",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "성서산업단지": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "221",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "이곡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "222",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "용산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "223",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "죽전": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "224",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "감삼": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "225",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "두류": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "226",
+        "line": "2호선",
+        "districtCode": "27290"
+    },
+    "내당": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "227",
+        "line": "2호선",
+        "districtCode": "27170"
+    },
+    "반고개": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "228",
+        "line": "2호선",
+        "districtCode": "27170"
+    },
+    "청라언덕": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "229",
+        "line": "2호선",
+        "districtCode": "27110"
+    },
+    "경대병원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "231",
+        "line": "2호선",
+        "districtCode": "27110"
+    },
+    "대구은행": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "232",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "범어": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "233",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "수성구청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "234",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "만촌": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "235",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "담티": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "236",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "연호": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "237",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "수성알파시티": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "238",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "고산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "239",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "신매": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "240",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "사월": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "241",
+        "line": "2호선",
+        "districtCode": "27260"
+    },
+    "정평": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "242",
+        "line": "2호선",
+        "districtCode": "47290"
+    },
+    "임당": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "243",
+        "line": "2호선",
+        "districtCode": "47290"
+    },
+    "영남대": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "244",
+        "line": "2호선",
+        "districtCode": "47290"
+    },
+    "칠곡경대병원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "312",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "학정": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "313",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "팔거": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "314",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "동천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "315",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "칠곡운암": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "316",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "구암": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "317",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "태전": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "318",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "매천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "319",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "매천시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "320",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "팔달": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "321",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "공단": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "322",
+        "line": "3호선",
+        "districtCode": "27170"
+    },
+    "만평": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "323",
+        "line": "3호선",
+        "districtCode": "27170"
+    },
+    "팔달시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "324",
+        "line": "3호선",
+        "districtCode": "27230"
+    },
+    "원대": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "325",
+        "line": "3호선",
+        "districtCode": "27170"
+    },
+    "북구청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "326",
+        "line": "3호선",
+        "districtCode": "27170"
+    },
+    "달성공원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "327",
+        "line": "3호선",
+        "districtCode": "27110"
+    },
+    "서문시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "328",
+        "line": "3호선",
+        "districtCode": "27110"
+    },
+    "남산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "330",
+        "line": "3호선",
+        "districtCode": "27110"
+    },
+    "건들바위": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "332",
+        "line": "3호선",
+        "districtCode": "27200"
+    },
+    "대봉교": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "333",
+        "line": "3호선",
+        "districtCode": "27200"
+    },
+    "수성시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "334",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "수성구민운동장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "335",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "어린이회관": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "336",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "황금": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "337",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "수성못": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "338",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "지산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "339",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "범물": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "340",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "용지": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "341",
+        "line": "3호선",
+        "districtCode": "27260"
+    },
+    "구미": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K110",
+        "line": "대경선",
+        "districtCode": "47190"
+    },
+    "사곡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K111",
+        "line": "대경선",
+        "districtCode": "47190"
+    },
+    "왜관": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K113",
+        "line": "대경선",
+        "districtCode": "47850"
+    },
+    "서대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K115",
+        "line": "대경선",
+        "districtCode": "27170"
+    },
+    "대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K117",
+        "line": "대경선",
+        "districtCode": "27230"
+    },
+    "동대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K118",
+        "line": "대경선",
+        "districtCode": "27140"
+    },
+    "경산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K119",
+        "line": "대경선",
+        "districtCode": "47290"
+    }
+}

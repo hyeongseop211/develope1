@@ -1,0 +1,149 @@
+{
+    "사상(서부터미널)": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "1",
+        "line": "부산김해경전철",
+        "districtCode": "26530"
+    },
+    "괘법르네시떼": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "2",
+        "line": "부산김해경전철",
+        "districtCode": "26530"
+    },
+    "서부산유통지구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "3",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "공항": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "4",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "덕두": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "5",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "등구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "6",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "대저": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "7",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "평강": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "8",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "대사": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "9",
+        "line": "부산김해경전철",
+        "districtCode": "26440"
+    },
+    "불암": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "10",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "지내": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "11",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "김해대학(안동)": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "12",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "인제대(활천)": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "13",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "김해시청": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "14",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "부원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "15",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "봉황": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "16",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "수로왕릉": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "17",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "박물관": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "18",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "연지공원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "19",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "장신대": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "20",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    },
+    "가야대(삼계)": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "21",
+        "line": "부산김해경전철",
+        "districtCode": "48250"
+    }
+}

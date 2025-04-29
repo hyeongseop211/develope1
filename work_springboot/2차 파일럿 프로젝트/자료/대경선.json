@@ -1,0 +1,51 @@
+{
+    "구미": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K110",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "사곡": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K111",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "왜관": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K113",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "서대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K115",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K117",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "동대구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K118",
+        "line": "대경선",
+        "districtCode": ""
+    },
+    "경산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "K119",
+        "line": "대경선",
+        "districtCode": ""
+    }
+}

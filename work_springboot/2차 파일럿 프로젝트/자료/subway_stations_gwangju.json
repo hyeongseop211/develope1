@@ -1,0 +1,142 @@
+{
+    "녹동": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "100",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "소태": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "101",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "학동증심사입구": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "102",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "남광주": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "문화전당": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "금남로4가": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "105",
+        "line": "1호선",
+        "districtCode": "29110"
+    },
+    "금남로5가": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "106",
+        "line": "1호선",
+        "districtCode": "29170"
+    },
+    "양동시장": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "107",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "돌고개": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "108",
+        "line": "1호선",
+        "districtCode": "29155"
+    },
+    "농성": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "109",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "화정": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "110",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "쌍촌": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "111",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "운천": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "112",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "상무": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "113",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "김대중컨벤션센터": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "114",
+        "line": "1호선",
+        "districtCode": "29140"
+    },
+    "공항": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "29200"
+    },
+    "송정공원": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "29200"
+    },
+    "광주송정역": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "29200"
+    },
+    "도산": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "29200"
+    },
+    "평동": {
+        "x": 0,
+        "y": 0,
+        "stationCode": "119",
+        "line": "1호선",
+        "districtCode": "29200"
+    }
+}

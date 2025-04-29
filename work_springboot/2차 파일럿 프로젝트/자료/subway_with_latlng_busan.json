@@ -1,0 +1,758 @@
+{
+    "다대포해수욕장": {
+        "stationCode": "95",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0481605146045,
+        "longitude": 128.965782934439
+    },
+    "다대포항": {
+        "stationCode": "96",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0576775626584,
+        "longitude": 128.971306868032
+    },
+    "낫개": {
+        "stationCode": "97",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.065334914564,
+        "longitude": 128.979663395342
+    },
+    "신장림": {
+        "stationCode": "98",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0747429522444,
+        "longitude": 128.976593289614
+    },
+    "장림": {
+        "stationCode": "99",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.081961734507,
+        "longitude": 128.977350698097
+    },
+    "동매": {
+        "stationCode": "100",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0897562520489,
+        "longitude": 128.973526035966
+    },
+    "신평": {
+        "stationCode": "101",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0952286648109,
+        "longitude": 128.960618556493
+    },
+    "하단": {
+        "stationCode": "102",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.1062385683347,
+        "longitude": 128.966786546793
+    },
+    "당리": {
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.1035668582463,
+        "longitude": 128.973696685691
+    },
+    "사하": {
+        "stationCode": "104",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0997677417715,
+        "longitude": 128.983395006332
+    },
+    "괴정": {
+        "stationCode": "105",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.0999358214704,
+        "longitude": 128.992487217814
+    },
+    "대티": {
+        "stationCode": "106",
+        "line": "1호선",
+        "districtCode": "26380",
+        "latitude": 35.1031581926258,
+        "longitude": 128.999943470572
+    },
+    "서대신": {
+        "stationCode": "107",
+        "line": "1호선",
+        "districtCode": "26140",
+        "latitude": 35.11091202151769,
+        "longitude": 129.01213289704364
+    },
+    "동대신": {
+        "stationCode": "108",
+        "line": "1호선",
+        "districtCode": "26140",
+        "latitude": 35.11032054771603,
+        "longitude": 129.0177333285286
+    },
+    "토성": {
+        "stationCode": "109",
+        "line": "1호선",
+        "districtCode": "26140",
+        "latitude": 35.1007852525409,
+        "longitude": 129.019785649708
+    },
+    "자갈치": {
+        "stationCode": "110",
+        "line": "1호선",
+        "districtCode": "26110",
+        "latitude": 35.097195508119285,
+        "longitude": 129.0260699211048
+    },
+    "남포": {
+        "stationCode": "111",
+        "line": "1호선",
+        "districtCode": "26110",
+        "latitude": 35.09790554832192,
+        "longitude": 129.03473562824252
+    },
+    "중앙": {
+        "stationCode": "112",
+        "line": "1호선",
+        "districtCode": "26110",
+        "latitude": 37.31599451967913,
+        "longitude": 126.83883035405907
+    },
+    "부산역": {
+        "stationCode": "113",
+        "line": "1호선",
+        "districtCode": "26170",
+        "latitude": 35.1145412381182,
+        "longitude": 129.039344263316
+    },
+    "초량": {
+        "stationCode": "114",
+        "line": "1호선",
+        "districtCode": "26170",
+        "latitude": 35.1205304214806,
+        "longitude": 129.042661154399
+    },
+    "부산진": {
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "26170",
+        "latitude": 35.124819326380845,
+        "longitude": 129.04761201930125
+    },
+    "좌천": {
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "26170",
+        "latitude": 35.31128101642938,
+        "longitude": 129.2438701357993
+    },
+    "범일": {
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "26170",
+        "latitude": 35.14080345890983,
+        "longitude": 129.0593528545117
+    },
+    "범내골": {
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "26230",
+        "latitude": 35.1473134465248,
+        "longitude": 129.05924810527
+    },
+    "서면": {
+        "stationCode": "219",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.157939062512,
+        "longitude": 129.059300883545
+    },
+    "부전": {
+        "stationCode": "120",
+        "line": "1호선",
+        "districtCode": "26230",
+        "latitude": 35.1646514052361,
+        "longitude": 129.060119800439
+    },
+    "양정": {
+        "stationCode": "121",
+        "line": "1호선",
+        "districtCode": "26230",
+        "latitude": 37.604027962835566,
+        "longitude": 127.19466908658632
+    },
+    "시청": {
+        "stationCode": "122",
+        "line": "1호선",
+        "districtCode": "26470",
+        "latitude": 37.56534539636417,
+        "longitude": 126.97719821079865
+    },
+    "연산": {
+        "stationCode": "305",
+        "line": "3호선",
+        "districtCode": "26470",
+        "latitude": 36.212295849098574,
+        "longitude": 127.20081634214654
+    },
+    "교대": {
+        "stationCode": "124",
+        "line": "1호선",
+        "districtCode": "26470",
+        "latitude": 37.4927431676548,
+        "longitude": 127.013867969161
+    },
+    "동래": {
+        "stationCode": "402",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.20561606540984,
+        "longitude": 129.0784743842795
+    },
+    "명륜": {
+        "stationCode": "126",
+        "line": "1호선",
+        "districtCode": "26260",
+        "latitude": 35.2125752875352,
+        "longitude": 129.079702639717
+    },
+    "온천장": {
+        "stationCode": "127",
+        "line": "1호선",
+        "districtCode": "26260",
+        "latitude": 35.2202705693472,
+        "longitude": 129.086435133803
+    },
+    "부산대": {
+        "stationCode": "128",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.22964948660202,
+        "longitude": 129.08942537773808
+    },
+    "장전": {
+        "stationCode": "129",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.23807481304964,
+        "longitude": 129.08814333961908
+    },
+    "구서": {
+        "stationCode": "130",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.2472824601624,
+        "longitude": 129.091288325323
+    },
+    "두실": {
+        "stationCode": "131",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.2570169811596,
+        "longitude": 129.091371463912
+    },
+    "남산": {
+        "stationCode": "132",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.8566969364077,
+        "longitude": 128.583462127899
+    },
+    "범어사": {
+        "stationCode": "133",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.27306328395934,
+        "longitude": 129.09264111025075
+    },
+    "노포": {
+        "stationCode": "134",
+        "line": "1호선",
+        "districtCode": "26410",
+        "latitude": 35.2838438093648,
+        "longitude": 129.09502424558
+    },
+    "장산": {
+        "stationCode": "201",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 35.1699558313015,
+        "longitude": 129.177022545045
+    },
+    "중동": {
+        "stationCode": "202",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 37.486681622773176,
+        "longitude": 126.76453398304898
+    },
+    "해운대": {
+        "stationCode": "203",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 35.1636479638612,
+        "longitude": 129.158897240251
+    },
+    "동백": {
+        "stationCode": "204",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 37.269101384338924,
+        "longitude": 127.15269056435368
+    },
+    "벡스코": {
+        "stationCode": "205",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 35.1712399344204,
+        "longitude": 129.136705372019
+    },
+    "센텀시티": {
+        "stationCode": "206",
+        "line": "2호선",
+        "districtCode": "26350",
+        "latitude": 35.168948888080884,
+        "longitude": 129.1317651180283
+    },
+    "민락": {
+        "stationCode": "207",
+        "line": "2호선",
+        "districtCode": "26500",
+        "latitude": 35.1670631931086,
+        "longitude": 129.122097073991
+    },
+    "수영": {
+        "stationCode": "301",
+        "line": "3호선",
+        "districtCode": "26500",
+        "latitude": 35.165680361287,
+        "longitude": 129.114809550972
+    },
+    "광안": {
+        "stationCode": "209",
+        "line": "2호선",
+        "districtCode": "26500",
+        "latitude": 35.157858583447,
+        "longitude": 129.113145418291
+    },
+    "금련산": {
+        "stationCode": "210",
+        "line": "2호선",
+        "districtCode": "26500",
+        "latitude": 35.14969257761234,
+        "longitude": 129.11096146101232
+    },
+    "남천": {
+        "stationCode": "211",
+        "line": "2호선",
+        "districtCode": "26500",
+        "latitude": 35.1420150673392,
+        "longitude": 129.107838322896
+    },
+    "경성대·부경대": {
+        "stationCode": "212",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1376003833537,
+        "longitude": 129.100519243797
+    },
+    "대연": {
+        "stationCode": "213",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1351251955716,
+        "longitude": 129.092118524312
+    },
+    "못골": {
+        "stationCode": "214",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1347250910939,
+        "longitude": 129.084381118075
+    },
+    "지게골": {
+        "stationCode": "215",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1355628667805,
+        "longitude": 129.074424176843
+    },
+    "문현": {
+        "stationCode": "216",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1390425736004,
+        "longitude": 129.067394840249
+    },
+    "국제금융센터·부산은행": {
+        "stationCode": "217",
+        "line": "2호선",
+        "districtCode": "26290",
+        "latitude": 35.1459205441501,
+        "longitude": 129.066743786541
+    },
+    "전포": {
+        "stationCode": "218",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.1530881426641,
+        "longitude": 129.06538457863
+    },
+    "부암": {
+        "stationCode": "220",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.157364020045065,
+        "longitude": 129.0501711324292
+    },
+    "가야": {
+        "stationCode": "221",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.1559353192489,
+        "longitude": 129.043313481032
+    },
+    "동의대": {
+        "stationCode": "222",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.1540609901883,
+        "longitude": 129.032596868027
+    },
+    "개금": {
+        "stationCode": "223",
+        "line": "2호선",
+        "districtCode": "26230",
+        "latitude": 35.1532421422541,
+        "longitude": 129.020568202069
+    },
+    "냉정": {
+        "stationCode": "224",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1512560458061,
+        "longitude": 129.012118730836
+    },
+    "주례": {
+        "stationCode": "225",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1504864668448,
+        "longitude": 129.002874383901
+    },
+    "감전": {
+        "stationCode": "226",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1553461063375,
+        "longitude": 128.99147643385
+    },
+    "사상": {
+        "stationCode": "227",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1625682832279,
+        "longitude": 128.988724714287
+    },
+    "덕포": {
+        "stationCode": "228",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.173322543115,
+        "longitude": 128.983801941146
+    },
+    "모덕": {
+        "stationCode": "229",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1804122918444,
+        "longitude": 128.985603131583
+    },
+    "모라": {
+        "stationCode": "230",
+        "line": "2호선",
+        "districtCode": "26530",
+        "latitude": 35.1895447446342,
+        "longitude": 128.988569733613
+    },
+    "구남": {
+        "stationCode": "231",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.1966903928098,
+        "longitude": 128.994852323186
+    },
+    "구명": {
+        "stationCode": "232",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.2028092156488,
+        "longitude": 128.999556181232
+    },
+    "덕천": {
+        "stationCode": "313",
+        "line": "3호선",
+        "districtCode": "26320",
+        "latitude": 35.210434749918534,
+        "longitude": 129.00517512816737
+    },
+    "수정": {
+        "stationCode": "234",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.2231832264448,
+        "longitude": 129.009105154949
+    },
+    "화명": {
+        "stationCode": "235",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.23451172253,
+        "longitude": 129.007640378399
+    },
+    "율리": {
+        "stationCode": "236",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.24625350303768,
+        "longitude": 129.01286767118953
+    },
+    "동원": {
+        "stationCode": "237",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 35.2586448319904,
+        "longitude": 129.012410550189
+    },
+    "금곡": {
+        "stationCode": "238",
+        "line": "2호선",
+        "districtCode": "26320",
+        "latitude": 37.6373551430559,
+        "longitude": 127.207533674718
+    },
+    "호포": {
+        "stationCode": "239",
+        "line": "2호선",
+        "districtCode": "48330",
+        "latitude": 35.2808327093335,
+        "longitude": 129.017518090893
+    },
+    "증산": {
+        "stationCode": "240",
+        "line": "2호선",
+        "districtCode": "48330",
+        "latitude": 37.583746353282,
+        "longitude": 126.909494991105
+    },
+    "부산대양산캠퍼스": {
+        "stationCode": "241",
+        "line": "2호선",
+        "districtCode": "48330",
+        "latitude": 35.3168258388166,
+        "longitude": 129.013992153753
+    },
+    "남양산": {
+        "stationCode": "242",
+        "line": "2호선",
+        "districtCode": "48330",
+        "latitude": 35.3254476866423,
+        "longitude": 129.019413640564
+    },
+    "양산": {
+        "stationCode": "243",
+        "line": "2호선",
+        "districtCode": "48330",
+        "latitude": 35.3387498687181,
+        "longitude": 129.026444387383
+    },
+    "망미": {
+        "stationCode": "302",
+        "line": "3호선",
+        "districtCode": "26500",
+        "latitude": 35.171497899839316,
+        "longitude": 129.10831503568375
+    },
+    "배산": {
+        "stationCode": "303",
+        "line": "3호선",
+        "districtCode": "26470",
+        "latitude": 35.1734942170739,
+        "longitude": 129.09558177246
+    },
+    "물만골": {
+        "stationCode": "304",
+        "line": "3호선",
+        "districtCode": "26470",
+        "latitude": 35.1767970911539,
+        "longitude": 129.0857095864
+    },
+    "거제": {
+        "stationCode": "306",
+        "line": "3호선",
+        "districtCode": "26470",
+        "latitude": 35.18848999628461,
+        "longitude": 129.0740928144452
+    },
+    "종합운동장": {
+        "stationCode": "307",
+        "line": "3호선",
+        "districtCode": "26470",
+        "latitude": 37.5111446632705,
+        "longitude": 127.073849447402
+    },
+    "사직": {
+        "stationCode": "308",
+        "line": "3호선",
+        "districtCode": "26260",
+        "latitude": 35.1986215514386,
+        "longitude": 129.065193277832
+    },
+    "미남": {
+        "stationCode": "401",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.20684465674998,
+        "longitude": 129.06898858871165
+    },
+    "만덕": {
+        "stationCode": "310",
+        "line": "3호선",
+        "districtCode": "26320",
+        "latitude": 35.2130037763101,
+        "longitude": 129.036274850219
+    },
+    "남산정": {
+        "stationCode": "311",
+        "line": "3호선",
+        "districtCode": "26320",
+        "latitude": 35.21332375652248,
+        "longitude": 129.02375291133384
+    },
+    "숙등": {
+        "stationCode": "312",
+        "line": "3호선",
+        "districtCode": "26320",
+        "latitude": 35.2120778435626,
+        "longitude": 129.013192843436
+    },
+    "구포": {
+        "stationCode": "314",
+        "line": "3호선",
+        "districtCode": "26320",
+        "latitude": 35.2054809460664,
+        "longitude": 128.9971139605
+    },
+    "강서구청": {
+        "stationCode": "315",
+        "line": "3호선",
+        "districtCode": "26440",
+        "latitude": 35.2111798817286,
+        "longitude": 128.981986450565
+    },
+    "체육공원": {
+        "stationCode": "316",
+        "line": "3호선",
+        "districtCode": "26440",
+        "latitude": 35.2124735466918,
+        "longitude": 128.969425373083
+    },
+    "대저": {
+        "stationCode": "317",
+        "line": "3호선",
+        "districtCode": "26440",
+        "latitude": 35.2130452646571,
+        "longitude": 128.960632678445
+    },
+    "수안": {
+        "stationCode": "403",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.2017370185204,
+        "longitude": 129.083848486855
+    },
+    "낙민": {
+        "stationCode": "404",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.200218916242,
+        "longitude": 129.090778955954
+    },
+    "충렬사": {
+        "stationCode": "405",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.20028345958105,
+        "longitude": 129.09788161135464
+    },
+    "명장": {
+        "stationCode": "406",
+        "line": "4호선",
+        "districtCode": "26260",
+        "latitude": 35.20540841852537,
+        "longitude": 129.1018738053871
+    },
+    "서동": {
+        "stationCode": "407",
+        "line": "4호선",
+        "districtCode": "26410",
+        "latitude": 35.2131681497048,
+        "longitude": 129.107524541959
+    },
+    "금사": {
+        "stationCode": "408",
+        "line": "4호선",
+        "districtCode": "26410",
+        "latitude": 35.2157859199559,
+        "longitude": 129.1151206096
+    },
+    "반여농산물시장": {
+        "stationCode": "409",
+        "line": "4호선",
+        "districtCode": "26350",
+        "latitude": 35.2177499579063,
+        "longitude": 129.123995882239
+    },
+    "석대": {
+        "stationCode": "410",
+        "line": "4호선",
+        "districtCode": "26350",
+        "latitude": 35.2181370268054,
+        "longitude": 129.137020635865
+    },
+    "영산대": {
+        "stationCode": "411",
+        "line": "4호선",
+        "districtCode": "26350",
+        "latitude": 35.22559607721028,
+        "longitude": 129.14611605582886
+    },
+    "윗반송": {
+        "stationCode": "412",
+        "line": "4호선",
+        "districtCode": "26350",
+        "latitude": 35.2323946024307,
+        "longitude": 129.15375363540113
+    },
+    "고촌": {
+        "stationCode": "413",
+        "line": "4호선",
+        "districtCode": "26710",
+        "latitude": 37.601213413053,
+        "longitude": 126.770325947061
+    },
+    "안평": {
+        "stationCode": "414",
+        "line": "4호선",
+        "districtCode": "26710",
+        "latitude": 35.3339512298636,
+        "longitude": 126.78027142761
+    }
+}
