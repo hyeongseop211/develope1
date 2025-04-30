@@ -1,0 +1,156 @@
+{
+    "판암": {
+        "stationCode": "101",
+        "line": "1호선",
+        "districtCode": "30110",
+        "latitude": 36.3169610007362,
+        "longitude": 127.458427352399
+    },
+    "신흥": {
+        "stationCode": "102",
+        "line": "1호선",
+        "districtCode": "30110",
+        "latitude": 37.4409230460675,
+        "longitude": 127.147538132656
+    },
+    "대동": {
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "30110",
+        "latitude": 36.3295857807756,
+        "longitude": 127.442837712837
+    },
+    "대전": {
+        "stationCode": "103",
+        "line": "1호선",
+        "districtCode": "30110",
+        "latitude": 36.33229415139486,
+        "longitude": 127.4346445159045
+    },
+    "중앙로": {
+        "stationCode": "105",
+        "line": "1호선",
+        "districtCode": "30140",
+        "latitude": 36.32866530912132,
+        "longitude": 127.4258281669503
+    },
+    "중구청": {
+        "stationCode": "106",
+        "line": "1호선",
+        "districtCode": "30140",
+        "latitude": 36.3248034278274,
+        "longitude": 127.419552786885
+    },
+    "서대전네거리": {
+        "stationCode": "107",
+        "line": "1호선",
+        "districtCode": "30140",
+        "latitude": 36.32242246757099,
+        "longitude": 127.41257645927034
+    },
+    "오룡": {
+        "stationCode": "108",
+        "line": "1호선",
+        "districtCode": "30140",
+        "latitude": 36.3286893013728,
+        "longitude": 127.40492144995
+    },
+    "용문": {
+        "stationCode": "109",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 37.4826099970057,
+        "longitude": 127.594385099556
+    },
+    "탄방": {
+        "stationCode": "110",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 36.3455472425069,
+        "longitude": 127.384569666381
+    },
+    "시청": {
+        "stationCode": "111",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 37.56534539636417,
+        "longitude": 126.97719821079865
+    },
+    "정부청사": {
+        "stationCode": "112",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 37.4265047272927,
+        "longitude": 126.989868044926
+    },
+    "갈마": {
+        "stationCode": "113",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 36.3575809907703,
+        "longitude": 127.372796710623
+    },
+    "월평": {
+        "stationCode": "114",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 36.3582587338705,
+        "longitude": 127.364599812571
+    },
+    "갑천": {
+        "stationCode": "115",
+        "line": "1호선",
+        "districtCode": "30170",
+        "latitude": 36.3547487461809,
+        "longitude": 127.354690249086
+    },
+    "유성온천": {
+        "stationCode": "116",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.3537203343187,
+        "longitude": 127.341445807064
+    },
+    "구암": {
+        "stationCode": "117",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.356695510518,
+        "longitude": 127.330731986244
+    },
+    "현충원": {
+        "stationCode": "118",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.3590845904517,
+        "longitude": 127.3217976064
+    },
+    "월드컵경기장": {
+        "stationCode": "119",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 37.5696355653344,
+        "longitude": 126.899098148061
+    },
+    "노은": {
+        "stationCode": "120",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.3741446787189,
+        "longitude": 127.317883531845
+    },
+    "지족": {
+        "stationCode": "121",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.3841073391355,
+        "longitude": 127.319497778302
+    },
+    "반석": {
+        "stationCode": "122",
+        "line": "1호선",
+        "districtCode": "30200",
+        "latitude": 36.392180531687046,
+        "longitude": 127.31455508683969
+    }
+}
