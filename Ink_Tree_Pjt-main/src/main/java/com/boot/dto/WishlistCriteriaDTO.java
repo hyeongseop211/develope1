@@ -2,7 +2,7 @@ package com.boot.dto;
 
 public class WishlistCriteriaDTO {
     private int page = 1;
-    private int amount = 10;
+    private int amount = 9;
 
     public int getStartRow() {
         return (page - 1) * amount;

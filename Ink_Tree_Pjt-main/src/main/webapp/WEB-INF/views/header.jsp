@@ -131,7 +131,7 @@
 <!--                                        <div class="dropdown-item-description">최근 검색한 아파트 및 지역</div>-->
 <!--                                    </div>-->
 <!--                                </a>-->
-								<a href="/book_wishlist" class="dropdown-item">
+								<a href="/wishlist/list" class="dropdown-item">
 								    <div class="dropdown-icon-wrapper">
 								        <i class="dropdown-icon fa-solid fa-heart"></i>
 								    </div>

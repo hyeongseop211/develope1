@@ -808,7 +808,7 @@
                                 </button>
                             </c:otherwise>
                         </c:choose>
-                        <button class="action-button secondary-button" onclick="addToWishlist(${book.bookNumber})">
+                        <button class="action-button secondary-button" onclick="addToWishlist('${book.bookNumber}')">
                             <i class="fas fa-heart"></i> 위시리스트에 추가
                         </button>
                         
@@ -1206,28 +1206,32 @@
                 showModal('error', '로그인 필요', '위시리스트 기능은 로그인 후 이용 가능합니다.');
                 return;
             <% } %>
-			
+            
+            console.log("위시리스트 추가 요청 - bookNumber: " + bookNumber);
             
            $.ajax({
             type: "post",
-            url: "wishlist/add_wishlist",
+            url: "/wishlist/add_wishlist",
             data: {
                 bookNumber: bookNumber
             },
+            dataType: "text", // 응답 데이터 타입을 명시적으로 지정
             success: function(response) {
+                console.log("위시리스트 응답:", response);
                 if (response === "Success") {
                     showModal('success', '위시리스트 추가', '도서가 위시리스트에 추가되었습니다.');
-                }else if (response === "already") {
-                    showModal('info', '이미 위시리스트에 추가되었습니다.', '이미 위시리스트에 추가된 도서입니다.');
-                }
-                else if (response === "Not_login") {
+                } else if (response === "already") {
+                    showModal('info', '이미 추가됨', '이미 위시리스트에 추가된 도서입니다.');
+                } else if (response === "Not_login") {
                     showModal('error', '로그인 필요', '위시리스트 기능은 로그인 후 이용 가능합니다.');
                 } else {
-                    showModal('error', '오류 발생', '알 수 없는 오류가 발생했습니다.');
+                    showModal('error', '오류 발생', '알 수 없는 응답: ' + response);
                 }
             },
-            error: function(xhr) {
-                console.error('위시리스트 추가 오류:', xhr, status, error);
+            error: function(xhr, textStatus, errorThrown) {
+                console.error('위시리스트 추가 오류:', xhr.status);
+                console.error('상태:', textStatus);
+                console.error('에러:', errorThrown);
                 showModal('error', '오류 발생', '서버 오류가 발생했습니다.');
             }
             

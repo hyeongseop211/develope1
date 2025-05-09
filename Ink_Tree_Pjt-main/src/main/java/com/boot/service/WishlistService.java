@@ -10,4 +10,7 @@ public interface WishlistService {
 	public List<BookDTO> Wishlist(int userNumber, int page);
 	
 	public int WishlistCount(int userNumber);
+	
+	public String removeWishlist(int userNumber, int bookNumber);
+	
 }

@@ -12,6 +12,7 @@ public class PageDTO {
    private NoticeCriteriaDTO noticeCriteriaDTO;
    private UserBookBorrowingCriteriaDTO userBookBorrowingCriteriaDTO;
    private SearchBookCriteriaDTO searchBookCriteriaDTO;
+   private WishlistCriteriaDTO wishlistCriteriaDTO;
 
    public PageDTO(int total, CriteriaDTO criteriaDTO) {
       this.total = total;
@@ -128,6 +129,24 @@ public class PageDTO {
 	   
 	   // ex> 10페이지 < 30페이지
 	   this.next = this.endPage < realEnd;
+   }
+   
+   // 위시리스트 페이징
+   public PageDTO(int total, WishlistCriteriaDTO wishlistCriteriaDTO) {
+      this.total = total;
+      this.wishlistCriteriaDTO = wishlistCriteriaDTO;
+
+      this.endPage = (int) (Math.ceil(wishlistCriteriaDTO.getPage() / 10.0)) * 10;
+      this.startPage = this.endPage - 9;
+
+      int realEnd = (int) (Math.ceil((total * 1.0) / wishlistCriteriaDTO.getAmount()));
+
+      if (realEnd <= this.endPage) {
+         this.endPage = realEnd;
+      }
+
+      this.prev = this.startPage > 1;
+      this.next = this.endPage < realEnd;
    }
    
    
