@@ -13,6 +13,7 @@ public class PageDTO {
    private UserBookBorrowingCriteriaDTO userBookBorrowingCriteriaDTO;
    private SearchBookCriteriaDTO searchBookCriteriaDTO;
    private WishlistCriteriaDTO wishlistCriteriaDTO;
+   private ActivityLogCriteriaDTO activityLogCriteriaDTO;
 
    public PageDTO(int total, CriteriaDTO criteriaDTO) {
       this.total = total;
@@ -149,5 +150,38 @@ public class PageDTO {
       this.next = this.endPage < realEnd;
    }
    
+   // 활동 로그 페이징을 위한 생성자
+   public PageDTO(int total, ActivityLogCriteriaDTO activityLogCriteriaDTO) {
+      this.total = total;
+      this.activityLogCriteriaDTO = activityLogCriteriaDTO;
+
+      this.endPage = (int) (Math.ceil(activityLogCriteriaDTO.getPageNum() / 10.0)) * 10;
+      this.startPage = this.endPage - 9;
+
+      int realEnd = (int) (Math.ceil((total * 1.0) / activityLogCriteriaDTO.getAmount()));
+
+      if (realEnd <= this.endPage) {
+         this.endPage = realEnd;
+      }
+
+      this.prev = this.startPage > 1;
+      this.next = this.endPage < realEnd;
+   }
    
+   // 활동 로그 간단 페이징 (page, size만 사용)
+   public PageDTO(int total, int page, int size) {
+      this.total = total;
+      
+      this.endPage = (int) (Math.ceil(page / 10.0)) * 10;
+      this.startPage = this.endPage - 9;
+
+      int realEnd = (int) (Math.ceil((total * 1.0) / size));
+
+      if (realEnd <= this.endPage) {
+         this.endPage = realEnd;
+      }
+
+      this.prev = this.startPage > 1;
+      this.next = this.endPage < realEnd;
+   }
 }

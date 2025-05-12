@@ -92,7 +92,7 @@
         <div class="header-content">
             <h2 class="borrowed-title">
                 <span class="title-icon"><i class="fas fa-heart"></i></span>
-                내 관심 도서 목록
+                내 찜한 도서 목록
             </h2>
             <p class="borrowed-subtitle">찜한 도서들을 모아놓은 공간입니다. 마음에 드는 책이 있으면 대출해보세요!</p>
         </div>

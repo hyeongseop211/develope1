@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.ActivityLogDAO">
+    <!-- 활동 로그 추가 -->
+    <insert id="insertActivityLog" parameterType="com.boot.dto.ActivityLogDTO">
+        INSERT INTO ACTIVITY_LOG (
+            activity_type, 
+            actor_type, 
+            actor_id, 
+            actor_name, 
+            target_name, 
+            description, 
+            log_date
+        ) VALUES (
+            #{activityType}, 
+            #{actorType}, 
+            #{actorId}, 
+            #{actorName}, 
+            #{targetName}, 
+            #{description}, 
+            #{logDate, jdbcType=TIMESTAMP}
+        )
+    </insert>
+    
+    <!-- 최근 활동 로그 조회 (Oracle용) -->
+    <select id="getRecentActivities" parameterType="int" resultType="com.boot.dto.ActivityLogDTO">
+        SELECT * FROM (
+            SELECT 
+                log_id AS logId,
+                activity_type AS activityType,
+                actor_type AS actorType,
+                actor_id AS actorId,
+                actor_name AS actorName,
+                target_name AS targetName,
+                description,
+                log_date AS logDate
+            FROM 
+                ACTIVITY_LOG
+            ORDER BY 
+                log_date DESC
+        ) WHERE ROWNUM &lt;= #{limit}
+    </select>
+    
+    <!-- 특정 유형의 활동 로그 조회 (Oracle용) -->
+    <select id="getActivitiesByType" resultType="com.boot.dto.ActivityLogDTO">
+        SELECT * FROM (
+            SELECT 
+                log_id AS logId,
+                activity_type AS activityType,
+                actor_type AS actorType,
+                actor_id AS actorId,
+                actor_name AS actorName,
+                target_name AS targetName,
+                description,
+                log_date AS logDate
+            FROM 
+                ACTIVITY_LOG
+            WHERE 
+                activity_type = #{activityType}
+            ORDER BY 
+                log_date DESC
+        ) WHERE ROWNUM &lt;= #{limit}
+    </select>
+    
+    <!-- 모든 활동 로그 조회 (페이징 처리, Oracle용) -->
+    <select id="getAllActivities" parameterType="HashMap" resultType="com.boot.dto.ActivityLogDTO">
+        SELECT * FROM (
+            SELECT 
+                ROWNUM rn,
+                t.*
+            FROM (
+                SELECT 
+                    log_id AS logId,
+                    activity_type AS activityType,
+                    actor_type AS actorType,
+                    actor_id AS actorId,
+                    actor_name AS actorName,
+                    target_name AS targetName,
+                    description,
+                    log_date AS logDate
+                FROM 
+                    ACTIVITY_LOG
+                ORDER BY 
+                    log_date DESC
+            ) t
+            WHERE ROWNUM &lt;= #{offset} + #{limit}
+        ) WHERE rn > #{offset}
+    </select>
+    
+    <!-- 총 로그 수 조회 -->
+    <select id="getTotalLogCount" resultType="int">
+        SELECT 
+            COUNT(*)
+        FROM 
+            ACTIVITY_LOG
+    </select>
+</mapper> 

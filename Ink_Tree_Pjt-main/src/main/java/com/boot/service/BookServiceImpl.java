@@ -26,6 +26,8 @@ public class BookServiceImpl implements BookService {
 	private SqlSession sqlSession;
 	@Autowired
 	private HttpSession session;
+	@Autowired
+	private ActivityLogService activityLogService;
 
 	@Override
 	public void insertBook(HashMap<String, String> param) {
@@ -34,6 +36,18 @@ public class BookServiceImpl implements BookService {
 
 		if (loginUser.getUserAdmin() == 1) {
 			dao.insertBook(param);
+			
+			// 활동 로그 추가
+			String bookTitle = param.get("bookTitle");
+			String description = "\"" + bookTitle + "\" 도서가 등록되었습니다.";
+			activityLogService.createActivityLog(
+				"book_add", 
+				"admin", 
+				loginUser.getUserNumber(), 
+				loginUser.getUserName(), 
+				bookTitle, 
+				description
+			);
 		} else {
 			System.out.println("Not Admin access");
 		}
@@ -77,12 +91,62 @@ public class BookServiceImpl implements BookService {
 	public void bookBorrow(HashMap<String, String> param) {
 		BookDAO dao = sqlSession.getMapper(BookDAO.class);
 		dao.bookBorrow(param);
+		
+		// 활동 로그 추가
+		UserDTO loginUser = (UserDTO) session.getAttribute("loginUser");
+		
+		// 도서 정보 가져오기
+		String bookNumber = param.get("bookNumber");
+		HashMap<String, String> bookParam = new HashMap<>();
+		bookParam.put("bookNumber", bookNumber);
+		BookDTO book = dao.bookDetailInfo(bookParam);
+		
+		if (book != null) {
+			String bookTitle = book.getBookTitle();
+			String userName = loginUser.getUserName();
+			String description = userName + " 회원이 \"" + bookTitle + "\" 도서를 대출했습니다.";
+			
+			String actorType = loginUser.getUserAdmin() == 1 ? "admin" : "user";
+			activityLogService.createActivityLog(
+				"book_borrow", 
+				actorType, 
+				loginUser.getUserNumber(), 
+				loginUser.getUserName(), 
+				bookTitle, 
+				description
+			);
+		}
 	}
 
 	@Override
 	public void bookReturn(HashMap<String, String> param) {
 		BookDAO dao = sqlSession.getMapper(BookDAO.class);
 		dao.bookReturn(param);
+		
+		// 활동 로그 추가
+		UserDTO loginUser = (UserDTO) session.getAttribute("loginUser");
+		
+		// 도서 정보 가져오기
+		String bookNumber = param.get("bookNumber");
+		HashMap<String, String> bookParam = new HashMap<>();
+		bookParam.put("bookNumber", bookNumber);
+		BookDTO book = dao.bookDetailInfo(bookParam);
+		
+		if (book != null) {
+			String bookTitle = book.getBookTitle();
+			String userName = loginUser.getUserName();
+			String description = userName + " 회원이 \"" + bookTitle + "\" 도서를 반납했습니다.";
+			
+			String actorType = loginUser.getUserAdmin() == 1 ? "admin" : "user";
+			activityLogService.createActivityLog(
+				"book_return", 
+				actorType, 
+				loginUser.getUserNumber(), 
+				loginUser.getUserName(), 
+				bookTitle, 
+				description
+			);
+		}
 	}
 
 	@Override
@@ -106,8 +170,30 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public void deleteBook(HashMap<String, String> param) {
 		BookDAO dao = sqlSession.getMapper(BookDAO.class);
+		UserDTO loginUser = (UserDTO) session.getAttribute("loginUser");
+		
+		// 도서 정보 가져오기
+		String bookNumber = param.get("bookNumber");
+		HashMap<String, String> bookParam = new HashMap<>();
+		bookParam.put("bookNumber", bookNumber);
+		BookDTO book = dao.bookDetailInfo(bookParam);
+		
+		// 도서 삭제
 		dao.deleteBook(param);
-
+		
+		// 활동 로그 추가
+		if (book != null) {
+			String bookTitle = book.getBookTitle();
+			String description = "\"" + bookTitle + "\" 도서가 삭제되었습니다.";
+			activityLogService.createActivityLog(
+				"book_delete", 
+				"admin", 
+				loginUser.getUserNumber(), 
+				loginUser.getUserName(), 
+				bookTitle, 
+				description
+			);
+		}
 	}
 
 	@Override

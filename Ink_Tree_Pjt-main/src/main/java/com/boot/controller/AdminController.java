@@ -10,9 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.boot.dto.ActivityLogDTO;
 import com.boot.dto.NoticeCriteriaDTO;
 import com.boot.dto.NoticeDTO;
 import com.boot.dto.PageDTO;
+import com.boot.service.ActivityLogService;
 import com.boot.service.AdminService;
 import com.boot.service.BoardService;
 import com.boot.service.UtilService;
@@ -27,13 +29,27 @@ public class AdminController {
 	private AdminService admin_service;
 	@Autowired
 	private BoardService board_service;
+	@Autowired
+	private ActivityLogService activityLogService;
 
 	@RequestMapping("/admin_view")
 	public String adminView(Model model) {
+		// 기본 정보 로딩
 		model.addAttribute("totalBooks", service.getTotalBooks());
 		model.addAttribute("totalUsers", service.getTotalUsers());
 		model.addAttribute("borrowedBooks", service.getBorrowedBooks());
 		model.addAttribute("overdueBooks", service.getOverdueBooks());
+		
+		// 최근 활동 로그 가져오기 (5개)
+		try {
+			ArrayList<ActivityLogDTO> recentActivities = activityLogService.getRecentActivities(5);
+			model.addAttribute("recentActivities", recentActivities);
+		} catch (Exception e) {
+			e.printStackTrace();
+			// 오류 발생 시 빈 리스트 전달하여 페이지는 정상 로드되도록 함
+			model.addAttribute("recentActivities", new ArrayList<ActivityLogDTO>());
+		}
+		
 		return "admin_view";
 	}
 
