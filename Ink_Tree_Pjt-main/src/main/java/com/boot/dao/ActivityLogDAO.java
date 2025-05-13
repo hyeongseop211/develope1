@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.boot.dto.ActivityLogCriteriaDTO;
 import com.boot.dto.ActivityLogDTO;
 
 @Mapper
@@ -23,4 +24,10 @@ public interface ActivityLogDAO {
     
     // 총 로그 수 가져오기
     public int getTotalLogCount();
+    
+    // 모든 로그 가져오기 (Criteria 객체 활용)
+    public ArrayList<ActivityLogDTO> getAllActivities(ActivityLogCriteriaDTO cri);
+    
+    // 총 로그 수 가져오기 (필터링 적용)
+    public int getTotalLogCount(ActivityLogCriteriaDTO cri);
 } 

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>잉크트리 - 지하철역 주변 아파트 시세</title>
+    <title>잉크트리</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,16 +50,11 @@
                     <i class="nav-icon fa-solid fa-clipboard-list"></i>
                     <span>게시판</span>
                 </a>
-				<%
-				if (user != null) {
-				%>
-				<a href="user_book_borrowing"
-					class="nav-link ${currentPage == 'user_book_borrowing' ? 'active' : ''}">
-					<i class="nav-icon fa-solid fa-book-open-reader"></i> <span>대출기록</span>
-				</a>
-				<%
-				}
-				%>
+                <a href="/trade_post_view" class="nav-link ${currentPage == 'trade_post_view' ? 'active' : ''}">
+                    <i class="nav-icon fa-solid fa-cart-shopping"></i>
+                    <span>거래게시판</span>
+                </a>
+
             </nav>
 
             <div class="user-menu">
@@ -138,6 +133,24 @@
 								    <div class="dropdown-item-content">
 								        <div class="dropdown-item-title">북마크</div>
 								        <div class="dropdown-item-description">내가 찜한 도서 목록</div>
+								    </div>
+								</a>
+								<a href="/trade_post_favorite_view" class="dropdown-item">
+								    <div class="dropdown-icon-wrapper">
+								        <i class="dropdown-icon fa-solid fa-store"></i>
+								    </div>
+								    <div class="dropdown-item-content">
+								        <div class="dropdown-item-title">중고도서 북마크</div>
+								        <div class="dropdown-item-description">거래게시판을 통해 찜한 도서 목록</div>
+								    </div>
+								</a>
+								<a href="/user_book_borrowing" class="dropdown-item">
+								    <div class="dropdown-icon-wrapper">
+								        <i class="dropdown-icon fa-solid fa-book-open-reader"></i>
+								    </div>
+								    <div class="dropdown-item-content">
+								        <div class="dropdown-item-title">대출기록</div>
+								        <div class="dropdown-item-description">반납 & 대출 기록</div>
 								    </div>
 								</a>
                             </div>
@@ -226,5 +239,116 @@
             }
         });
     </script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<%
+	if (user != null) {
+	%>
+	<button class="chatbot-btn" id="chatbot-button">
+		<i class="fas fa-comment-dots"></i>
+	</button>
+	<div class="chatbot-container">
+		<div class="chatbot-header">
+			<h3>AI 채팅 상담</h3>
+			<button class="close-btn"><i class="fas fa-times"></i></button>
+		</div>
+		<div class="chatbot-messages">
+			<div class="message bot">
+				안녕하세요! 무엇을 도와드릴까요?
+			</div>
+		</div>
+		<div class="chatbot-input">
+			<input type="text" placeholder="메시지를 입력하세요...">
+			<button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+		</div>
+	</div>
+	<%
+	}
+	%>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const chatButton = document.getElementById('chatbot-button');
+						const chatContainer = document.querySelector('.chatbot-container');
+						const closeButton = document.querySelector('.close-btn');
+						const sendButton = document.querySelector('.send-btn');
+						const messageInput = document.querySelector('.chatbot-input input');
+						const messagesContainer = document.querySelector('.chatbot-messages');
+
+						// 채팅창 토글 기능
+						chatButton.addEventListener('click', () => {
+							chatContainer.classList.toggle('active'); // toggle로 변경
+						});
+
+						// X 버튼으로 닫기
+						closeButton.addEventListener('click', () => {
+							chatContainer.classList.remove('active');
+						});
+
+						// 메시지 전송
+						function sendMessage() {
+							const message = messageInput.value.trim();
+							if (message) {
+								// 사용자 메시지 추가
+								const userMessage = document.createElement('div');
+								userMessage.className = 'message user';
+								userMessage.textContent = message;
+								messagesContainer.appendChild(userMessage);
+
+								// 입력창 비우기
+								messageInput.value = '';
+
+								// 스크롤을 가장 아래로
+								messagesContainer.scrollTop = messagesContainer.scrollHeight;
+								fetch('/chatbot/ask', {
+									method: 'POST',
+									headers: { 'Content-Type': 'application/json' },
+									body: JSON.stringify({ message: message })
+								})
+										.then(res => res.json())
+										.then(data => {
+											// data.reply에 Gemini API 응답이 들어있음
+											//showInChatbot(data.reply);
+
+											const botMessage = document.createElement('div');
+											botMessage.className = 'message bot';
+											botMessage.textContent = data.reply;
+											messagesContainer.appendChild(botMessage);
+											messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+										});
+
+								// // 챗봇 응답
+								// setTimeout(() => {
+								//     const botMessage = document.createElement('div');
+								//     botMessage.className = 'message bot';
+								//     botMessage.textContent = "죄송합니다. 현재 응답을 준비중입니다.";
+								//     messagesContainer.appendChild(botMessage);
+								//     messagesContainer.scrollTop = messagesContainer.scrollHeight;
+								// }, 1000);
+							}
+						}
+
+						// 전송 버튼 클릭 이벤트
+						sendButton.addEventListener('click', sendMessage);
+
+						// Enter 키 입력 이벤트
+						messageInput.addEventListener('keypress', (e) => {
+							if (e.key === 'Enter') {
+								sendMessage();
+							}
+						});
+
+						// 채팅창 외부 클릭 시 닫기 (선택적)
+						document.addEventListener('click', (e) => {
+							if (!chatContainer.contains(e.target) && !chatButton.contains(e.target)) {
+								chatContainer.classList.remove('active');
+							}
+						});
+					});
+					// 예시 (fetch 사용)
+
+
+				</script>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.boot.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -29,7 +30,7 @@ public class AdminServiceImpl implements AdminService {
 	public void NoticeWrite(HashMap<String, String> param) {
 		NoticeDAO dao = sqlSession.getMapper(NoticeDAO.class);
 		dao.NoticeWrite(param);
-		
+
 		// 활동 로그 추가
 		UserDTO loginUser = (UserDTO) session.getAttribute("loginUser");
 		if (loginUser != null) {
@@ -67,6 +68,23 @@ public class AdminServiceImpl implements AdminService {
 	public void NoticeModify(HashMap<String, String> param) {
 		NoticeDAO dao = sqlSession.getMapper(NoticeDAO.class);
 		dao.NoticeModify(param);
+
+		// 활동 로그 추가
+		UserDTO loginUser = (UserDTO) session.getAttribute("loginUser");
+		if (loginUser != null) {
+			String noticeTitle = param.get("noticeTitle");
+			String description = "\"" + noticeTitle + "\" 공지사항이 등록되었습니다.";
+			
+			String actorType = loginUser.getUserAdmin() == 1 ? "admin" : "user";
+			activityLogService.createActivityLog(
+				"notice_modify", 
+				actorType, 
+				loginUser.getUserNumber(), 
+				loginUser.getUserName(), 
+				noticeTitle, 
+				description
+			);
+		}
 	}
 
 	@Override
@@ -102,4 +120,9 @@ public class AdminServiceImpl implements AdminService {
 		int total = dao.getTotalCount(noticeCriteriaDTO);
 		return total;
 	}
+	@Override
+    public Map<String, Integer> getAllCategoryCounts() {
+		NoticeDAO dao = sqlSession.getMapper(NoticeDAO.class);
+        return dao.getAllCategoryCounts();
+    }
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.boot.dao.ActivityLogDAO;
+import com.boot.dto.ActivityLogCriteriaDTO;
 import com.boot.dto.ActivityLogDTO;
 
 @Service
@@ -48,6 +49,57 @@ public class ActivityLogServiceImpl implements ActivityLogService {
         
         createActivityLog(log);
     }
+    // @Override
+    // public void createActivityLog(int activityType, int actorType, int actorId, 
+    //                              String actorName, String targetName, String description) {
+    //     ActivityLogDTO log = new ActivityLogDTO();
+
+    //     String activityTypeStr = "";
+       
+    //     switch (activityType) {
+    //         case 1:
+    //             activityTypeStr = "book_add";
+    //             break;
+    //         case 2:
+    //             activityTypeStr = "book_delete";
+    //             break;
+    //         case 3:
+    //             activityTypeStr = "book_borrow";
+    //             break;
+    //         case 4:
+    //             activityTypeStr = "book_return";
+    //             break;
+    //         case 5:
+    //             activityTypeStr = "user_add";
+    //             break;
+    //         case 6:
+    //             activityTypeStr = "notice_add";
+    //             break;
+    //         case 7:
+    //             activityTypeStr = "notice_delete";
+    //             break;
+    //         default:
+    //             break;
+    //     }
+
+    //     String actorTypeStr = "";
+    //     switch (actorType) {
+    //         case 1:
+    //             actorTypeStr = "admin";
+    //             break;
+    //         case 2:
+    //             actorTypeStr = "user";
+    //             break;
+
+    //         default:
+    //             break;
+    //     }
+
+    
+    @Override
+    public void addActivityLog(ActivityLogDTO log) {
+        createActivityLog(log);
+    }
     
     @Override
     public ArrayList<ActivityLogDTO> getRecentActivities(int limit) {
@@ -71,5 +123,17 @@ public class ActivityLogServiceImpl implements ActivityLogService {
     public int getTotalLogCount() {
         ActivityLogDAO dao = sqlSession.getMapper(ActivityLogDAO.class);
         return dao.getTotalLogCount();
+    }
+    
+    @Override
+    public ArrayList<ActivityLogDTO> getAllActivities(ActivityLogCriteriaDTO cri) {
+        ActivityLogDAO dao = sqlSession.getMapper(ActivityLogDAO.class);
+        return dao.getAllActivities(cri);
+    }
+    
+    @Override
+    public int getTotalLogCount(ActivityLogCriteriaDTO cri) {
+        ActivityLogDAO dao = sqlSession.getMapper(ActivityLogDAO.class);
+        return dao.getTotalLogCount(cri);
     }
 } 

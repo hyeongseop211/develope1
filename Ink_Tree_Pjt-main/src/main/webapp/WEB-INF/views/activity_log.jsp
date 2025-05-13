@@ -2,9 +2,11 @@
 <%@page import="com.boot.dto.UserDTO" %>
 <%@page import="java.util.ArrayList" %>
 <%@page import="com.boot.dto.PageDTO" %>
+<%@page import="com.boot.controller.util.ActivityTypeManager" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
 <html>
@@ -95,6 +97,7 @@
         .actor-info {
             color: #4a6cf7;
         }
+        
     </style>
 </head>
 
@@ -171,276 +174,109 @@
                 </div>
             </div>
 
+            <!-- 필터 옵션 -->
             <div class="activity-filter">
-                <div class="filter-item <%= request.getParameter("filter") == null || "all".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="all">전체</div>
-                <div class="filter-item <%= "book".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="book">도서 관련</div>
-                <div class="filter-item <%= "user".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="user">회원 관련</div>
-                <div class="filter-item <%= "notice".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="notice">공지사항 관련</div>
-                <div class="filter-item <%= "admin".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="admin">관리자 활동</div>
-                <div class="filter-item <%= "user-action".equals(request.getParameter("filter")) ? "active" : "" %>" data-filter="user-action">회원 활동</div>
+                <c:forEach items="${filterOptions}" var="option">
+                    <div class="filter-item ${param.filter == option.code || (param.filter == null && option.code == 'all') ? 'active' : ''}" 
+                         onclick="changeFilter('${option.code}')">
+                        ${option.displayName}
+                    </div>
+                </c:forEach>
             </div>
 
             <div class="card activity-list-full">
-                <% if(request.getAttribute("logList") != null) {
-                    ArrayList<ActivityLogDTO> logList = (ArrayList<ActivityLogDTO>)request.getAttribute("logList");
-                    
-                    // 필터 값 가져오기
-                    String filterParam = request.getParameter("filter");
-                    
-                    // 필터링된 로그 항목 수 계산
-                    int filteredCount = 0;
-                    for(ActivityLogDTO activity : logList) {
-                        boolean showItem = true;
-                        if (filterParam != null && !filterParam.equals("all")) {
-                            showItem = false;
-                            
-                            if (filterParam.equals("book") && activity.getActivityType().startsWith("book")) {
-                                showItem = true;
-                            } else if (filterParam.equals("user") && activity.getActivityType().startsWith("user")) {
-                                showItem = true;
-                            } else if (filterParam.equals("notice") && activity.getActivityType().startsWith("notice")) {
-                                showItem = true;
-                            } else if (filterParam.equals("admin") && activity.getActorType().equals("admin")) {
-                                showItem = true;
-                            } else if (filterParam.equals("user-action") && activity.getActorType().equals("user")) {
-                                showItem = true;
-                            }
-                        }
-                        
-                        if (showItem) {
-                            filteredCount++;
-                        }
-                    }
-                    
-                    if (filteredCount > 0) {
-                        for(ActivityLogDTO activity : logList) { 
-                            String iconClass = "";
-                            
-                            // 활동 유형에 따른 아이콘 설정
-                            switch(activity.getActivityType()) {
-                                case "book_add": iconClass = "ri-book-open-line"; break;
-                                case "user_add": iconClass = "ri-user-add-line"; break;
-                                case "book_borrow": iconClass = "ri-bookmark-line"; break;
-                                case "notice_add": iconClass = "ri-notification-line"; break;
-                                case "book_return": iconClass = "ri-book-read-line"; break;
-                                case "notice_delete": iconClass = "ri-delete-bin-line"; break;
-                                case "book_delete": iconClass = "ri-delete-bin-line"; break;
-                                default: iconClass = "ri-information-line";
-                            }
-                            
-                            // 활동 유형에 따른 필터 클래스 설정
-                            String filterClass = "";
-                            if (activity.getActivityType().startsWith("book")) {
-                                filterClass += " filter-book";
-                            } else if (activity.getActivityType().startsWith("user")) {
-                                filterClass += " filter-user";
-                            } else if (activity.getActivityType().startsWith("notice")) {
-                                filterClass += " filter-notice";
-                            }
-                            
-                            if (activity.getActorType().equals("admin")) {
-                                filterClass += " filter-admin";
-                            } else {
-                                filterClass += " filter-user-action";
-                            }
-                            
-                            // 필터에 따라 표시 여부 결정
-                            String displayStyle = "";
-                            if (filterParam != null && !filterParam.equals("all")) {
-                                boolean showItem = false;
-                                
-                                if (filterParam.equals("book") && activity.getActivityType().startsWith("book")) {
-                                    showItem = true;
-                                } else if (filterParam.equals("user") && activity.getActivityType().startsWith("user")) {
-                                    showItem = true;
-                                } else if (filterParam.equals("notice") && activity.getActivityType().startsWith("notice")) {
-                                    showItem = true;
-                                } else if (filterParam.equals("admin") && activity.getActorType().equals("admin")) {
-                                    showItem = true;
-                                } else if (filterParam.equals("user-action") && activity.getActorType().equals("user")) {
-                                    showItem = true;
-                                }
-                                
-                                if (!showItem) {
-                                    displayStyle = "display: none;";
-                                }
-                            }
-                            
-                            // 로그 시간 형식 처리
-                            java.time.LocalDateTime logDate = activity.getLogDate();
-                            String displayTime = "";
-                            
-                            java.time.LocalDateTime now = java.time.LocalDateTime.now();
-                            java.time.LocalDate today = now.toLocalDate();
-                            java.time.LocalDate yesterday = today.minusDays(1);
-                            java.time.LocalDate logDay = logDate.toLocalDate();
-                            
-                            if(logDay.equals(today)) {
-                                displayTime = "오늘 " + String.format("%02d:%02d", logDate.getHour(), logDate.getMinute());
-                            } else if(logDay.equals(yesterday)) {
-                                displayTime = "어제 " + String.format("%02d:%02d", logDate.getHour(), logDate.getMinute());
-                            } else {
-                                displayTime = logDate.getYear() + "년 " + logDate.getMonthValue() + "월 " + logDate.getDayOfMonth() + "일 " + 
-                                              String.format("%02d:%02d", logDate.getHour(), logDate.getMinute());
-                            }
-                                         
-                    %>
-                    <div class="activity-item<%=filterClass%>" style="<%=displayStyle%>">
-                        <div class="activity-icon">
-                            <i class="<%=iconClass%>"></i>
-                        </div>
-                        <div class="activity-details">
-                            <h4><%=activity.getActivityType().equals("book_add") ? "도서 등록" : 
-                                   activity.getActivityType().equals("user_add") ? "회원 가입" : 
-                                   activity.getActivityType().equals("book_borrow") ? "도서 대출" : 
-                                   activity.getActivityType().equals("notice_add") ? "공지사항 등록" : 
-                                   activity.getActivityType().equals("book_return") ? "도서 반납" : 
-                                   activity.getActivityType().equals("notice_delete") ? "공지사항 삭제" : 
-                                   activity.getActivityType().equals("book_delete") ? "도서 삭제" : "기타 활동" %></h4>
-                            <p><%=activity.getDescription()%></p>
-                            <div class="activity-meta">
-                                <span class="activity-time"><%=displayTime%></span>
-                                <span class="actor-info"><%=activity.getActorType().equals("admin") ? "어드민" : "회원"%> (<%=activity.getActorName()%>)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <% }
-                    } else { %>
+                <c:if test="${empty logList}">
                     <div class="activity-item">
                         <div class="activity-icon">
                             <i class="ri-information-line"></i>
                         </div>
                         <div class="activity-details">
                             <h4>표시할 활동 로그가 없습니다</h4>
-                            <p>선택한 필터에 해당하는 활동이 없습니다.</p>
+                            <p>시스템 활동이 기록되면 여기에 표시됩니다.</p>
                         </div>
                     </div>
-                    <% }
-                } else { %>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="ri-information-line"></i>
+                </c:if>
+                
+                <c:forEach items="${logList}" var="activity">
+                    <c:set var="typeInfo" value="${activityTypeManager.getTypeInfo(activity.activityType)}" scope="request" />
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="${typeInfo.iconClass}"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>${typeInfo.displayName}</h4>
+                            <p>${activity.description}</p>
+                            <div class="activity-meta">
+                                <span class="activity-time">
+                                    <fmt:parseDate value="${activity.logDate}" pattern="yyyy-MM-dd'T'HH:mm:ss" var="parsedLogDate" type="both" />
+                                    <fmt:formatDate value="${parsedLogDate}" pattern="yyyy년 MM월 dd일 HH:mm" var="formattedLogDate" />
+                                    ${formattedLogDate}
+                                </span>
+                                <span class="actor-info">${activity.actorType eq 'admin' ? '어드민' : '회원'} (${activity.actorName})</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="activity-details">
-                        <h4>표시할 활동 로그가 없습니다</h4>
-                        <p>시스템 활동이 기록되면 여기에 표시됩니다.</p>
-                    </div>
-                </div>
-                <% } %>
+                </c:forEach>
             </div>
             
-            <!-- 페이징 -->
-            <% if(request.getAttribute("pageMaker") != null) { 
-                PageDTO pageMaker = (PageDTO)request.getAttribute("pageMaker");
-                String filterParam = request.getParameter("filter");
-                String filterQueryParam = filterParam != null ? "&filter=" + filterParam : "";
-                
-                // 필터링된 데이터 개수에 따라 페이징 표시 여부 결정
-                boolean showPaging = true;
-                ArrayList<ActivityLogDTO> logList = (ArrayList<ActivityLogDTO>)request.getAttribute("logList");
-                
-                if (filterParam != null && !filterParam.equals("all") && logList != null) {
-                    int filteredCount = 0;
-                    for (ActivityLogDTO activity : logList) {
-                        boolean matchesFilter = false;
-                        
-                        if (filterParam.equals("book") && activity.getActivityType().startsWith("book")) {
-                            matchesFilter = true;
-                        } else if (filterParam.equals("user") && activity.getActivityType().startsWith("user")) {
-                            matchesFilter = true;
-                        } else if (filterParam.equals("notice") && activity.getActivityType().startsWith("notice")) {
-                            matchesFilter = true;
-                        } else if (filterParam.equals("admin") && activity.getActorType().equals("admin")) {
-                            matchesFilter = true;
-                        } else if (filterParam.equals("user-action") && activity.getActorType().equals("user")) {
-                            matchesFilter = true;
-                        }
-                        
-                        if (matchesFilter) {
-                            filteredCount++;
-                        }
-                    }
-                    
-                    int pageSize = 10; // 페이지당 기본 항목 수
-                    showPaging = filteredCount > pageSize;
-                }
-                
-                if (showPaging && pageMaker.getEndPage() > 1) {
-            %>
-            <div class="div_page">
-                <ul>
-                    <% if(pageMaker.isPrev()) { %>
-                    <li class="paginate_button">
-                        <a href="activity_log?page=<%=pageMaker.getStartPage()-1%><%=filterQueryParam%>">&laquo;</a>
-                    </li>
-                    <% } %>
-                    
-                    <% for(int i = pageMaker.getStartPage(); i <= pageMaker.getEndPage(); i++) { 
-                        String activeClass = "";
-                        if (request.getParameter("page") == null && i == 1) {
-                            activeClass = "active";
-                        } else if (request.getParameter("page") != null && Integer.parseInt(request.getParameter("page")) == i) {
-                            activeClass = "active";
-                        }
-                    %>
-                    <li class="paginate_button <%= activeClass %>">
-                        <a href="activity_log?page=<%=i%><%=filterQueryParam%>"><%=i%></a>
-                    </li>
-                    <% } %>
-                    
-                    <% if(pageMaker.isNext()) { %>
-                    <li class="paginate_button">
-                        <a href="activity_log?page=<%=pageMaker.getEndPage()+1%><%=filterQueryParam%>">&raquo;</a>
-                    </li>
-                    <% } %>
-                </ul>
-            </div>
-            <% } else { %>
-            <div class="div_page">
-                <ul>
-                    <li class="paginate_button active">
-                        <a href="activity_log?page=1<%=filterQueryParam%>">1</a>
-                    </li>
-                </ul>
-            </div>
-            <% } } %>
+            <!-- 페이징 처리 -->
+            <c:if test="${not empty pageMaker}">
+                <div class="div_page">
+                    <ul>
+                        <c:if test="${pageMaker.prev}">
+                            <li class="paginate_button">
+                                <a href="${pageMaker.startPage - 1}">
+                                    <i class="ri-arrow-left-s-line"></i>
+                                </a>
+                            </li>
+                        </c:if>
+
+                        <c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+                            <li class="paginate_button ${criteria.pageNum == num ? 'active' : ''}">
+                                <a href="${num}">${num}</a>
+                            </li>
+                        </c:forEach>
+
+                        <c:if test="${pageMaker.next}">
+                            <li class="paginate_button">
+                                <a href="${pageMaker.endPage + 1}">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </a>
+                            </li>
+                        </c:if>
+                    </ul>
+                </div>
+            </c:if>
+            
+            <!-- 페이징 처리를 위한 폼 -->
+            <form id="actionForm" action="activity_log" method="get">
+                <input type="hidden" name="pageNum" value="${criteria.pageNum}">
+                <input type="hidden" name="amount" value="${criteria.amount}">
+                <input type="hidden" name="filter" value="${param.filter}">
+            </form>
         </main>
     </div>
     
     <script>
         $(document).ready(function() {
-            // 현재 URL에서 필터 파라미터 가져오기
-            var currentFilter = getParameterByName('filter') || 'all';
+            // 페이징 처리
+            var actionForm = $("#actionForm");
             
-            // URL에서 파라미터 값 추출하는 함수
-            function getParameterByName(name) {
-                var url = window.location.href;
-                name = name.replace(/[\[\]]/g, '\\$&');
-                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                    results = regex.exec(url);
-                if (!results) return null;
-                if (!results[2]) return '';
-                return decodeURIComponent(results[2].replace(/\+/g, ' '));
-            }
-            
-            // 필터 클릭 이벤트
-            $('.filter-item').click(function() {
-                // UI 업데이트
-                $('.filter-item').removeClass('active');
-                $(this).addClass('active');
-                
-                // 필터 값 가져오기
-                var filter = $(this).data('filter');
-                
-                // URL 업데이트 (페이지는 1로 리셋)
-                var baseUrl = window.location.pathname;
-                var url = baseUrl + '?page=1';
-                if (filter !== 'all') {
-                    url += '&filter=' + filter;
-                }
-                window.location.href = url;
+            // 페이지번호 처리
+            $(".paginate_button a").on("click", function(e) {
+                e.preventDefault();
+                actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+                actionForm.submit();
             });
         });
+        
+        // 필터 변경
+        function changeFilter(filter) {
+            var actionForm = $("#actionForm");
+            actionForm.find("input[name='filter']").val(filter);
+            actionForm.find("input[name='pageNum']").val("1"); // 필터 변경 시 1페이지로
+            actionForm.submit();
+        }
     </script>
 </body>
 </html> 

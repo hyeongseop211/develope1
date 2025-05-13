@@ -263,7 +263,7 @@ function fn_submit() {
 					<h2 class="section-title">
 						<i class="fas fa-thumbs-up"></i> 추천 도서
 					</h2>
-					<a href="/recommended_books" class="action-link"> 더보기
+					<a href="/user_book_recommend" class="action-link"> 더보기
 						<i class="fas fa-chevron-right"></i>
 					</a>
 				</div>
@@ -280,19 +280,6 @@ function fn_submit() {
 										<i class="fas fa-book"></i>
 									</div>
 								</div>
-								<!-- 								<div class="book-info"> -->
-								<%-- 									<h3 class="book-title">${book.bookTitle}</h3> --%>
-								<%-- 									<p class="book-author">${book.bookWrite}</p> --%>
-
-								<%-- 									<c:choose> --%>
-								<%-- 										<c:when test="${book.bookCount == 0}"> --%>
-								<!-- 											<span class="book-status status-borrowed">대출 중</span> -->
-								<%-- 										</c:when> --%>
-								<%-- 										<c:otherwise> --%>
-								<!-- 											<span class="book-status status-available">대출 가능</span> -->
-								<%-- 										</c:otherwise> --%>
-								<%-- 									</c:choose> --%>
-								<!-- 								</div> -->
 								<div class="book-info">
 									<h3 class="book-title">${book.bookTitle}</h3>
 									<div class="book-author">저자: ${book.bookWrite}</div>

@@ -239,6 +239,9 @@
                                                 case "book_return": iconClass = "ri-book-read-line"; break;
                                                 case "notice_delete": iconClass = "ri-delete-bin-line"; break;
                                                 case "book_delete": iconClass = "ri-delete-bin-line"; break;
+                                                case "book_modify": iconClass = "ri-edit-line"; break;
+                                                case "user_modify": iconClass = "ri-user-settings-line"; break;
+                                                case "notice_modify": iconClass = "ri-edit-line"; break;
                                                 default: iconClass = "ri-information-line";
                                              }
                                           } else {
@@ -279,7 +282,11 @@
                                                    activity.getActivityType().equals("notice_add") ? "공지사항 등록" : 
                                                    activity.getActivityType().equals("book_return") ? "도서 반납" : 
                                                    activity.getActivityType().equals("notice_delete") ? "공지사항 삭제" : 
-                                                   activity.getActivityType().equals("book_delete") ? "도서 삭제" : "기타 활동"
+                                                   activity.getActivityType().equals("book_delete") ? "도서 삭제" : 
+                                                   activity.getActivityType().equals("book_modify") ? "도서 수정" : 
+                                                   activity.getActivityType().equals("user_modify") ? "회원 정보 수정" : 
+                                                   activity.getActivityType().equals("notice_modify") ? "공지사항 수정" : 
+                                                   "기타 활동"
                                                 ) : "기타 활동" %></h4>
                                           <p><%= activity.getDescription() != null ? activity.getDescription() : "" %></p>
                                           <span class="activity-time"><%= displayTime %></span>

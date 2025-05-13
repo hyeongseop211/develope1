@@ -3,6 +3,7 @@ package com.boot.service;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.boot.dto.ActivityLogCriteriaDTO;
 import com.boot.dto.ActivityLogDTO;
 
 public interface ActivityLogService {
@@ -12,6 +13,10 @@ public interface ActivityLogService {
     // 로그 생성 (파라미터 기반)
     public void createActivityLog(String activityType, String actorType, int actorId, 
                                   String actorName, String targetName, String description);
+    
+    
+    // 로그 추가
+    public void addActivityLog(ActivityLogDTO log);
     
     // 최근 활동 가져오기
     public ArrayList<ActivityLogDTO> getRecentActivities(int limit);
@@ -24,4 +29,10 @@ public interface ActivityLogService {
     
     // 총 로그 수 가져오기
     public int getTotalLogCount();
+    
+    // 모든 활동 조회 (Criteria 객체 활용 - 새 메소드)
+    public ArrayList<ActivityLogDTO> getAllActivities(ActivityLogCriteriaDTO cri);
+    
+    // 총 로그 수 조회 (필터링 적용 - 새 메소드)
+    public int getTotalLogCount(ActivityLogCriteriaDTO cri);
 } 

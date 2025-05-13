@@ -244,8 +244,4 @@ public class UserController {
 
 		return response;
 	}
-	@RequestMapping("/book_wishlist")
-	public String bookWishlist() {
-		return "book_wishlist";
-	}
 }
