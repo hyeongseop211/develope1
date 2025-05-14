@@ -11,16 +11,13 @@ function return_submit(button) {
 	$.ajax({
 		type: "post",
 		data: formData,
-		url: "book_return",
+		url: "apartment_favorite_remove",
 		success: function(data) {
-			alert("도서가 정상적으로 반납되었습니다.");
+			alert("정상적으로 처리되었습니다.");
 			location.href = "mypage"; // 새로고침
 		},
-		error: function(xhr, status, error) {
-			console.error("반납 중 오류 발생:", error);
-			console.error("상태 코드:", xhr.status);
-			console.error("응답 텍스트:", xhr.responseText);
-			alert("반납 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+		error: function() {
+			alert("서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
 		}
 	});
 }

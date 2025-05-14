@@ -1,4 +1,4 @@
-<%@page import="com.boot.dto.UserDTO"%>
+<%@page import="com.boot.user.dto.UserDTO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -47,6 +47,7 @@ function fn_submit() {
 </head>
 <body>
 	<jsp:include page="header.jsp" />
+	<!-- 컨테이너 시작 - 여기서 새로운 컨테이너를 시작합니다 -->
 	<div class="container">
 		<%
 		UserDTO user = (UserDTO) session.getAttribute("loginUser");
@@ -88,260 +89,260 @@ function fn_submit() {
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="search-header">
-				<h1 class="search-title">
-					<i class="fas fa-book"></i> 도서 검색
-				</h1>
+		<!-- 검색 헤더 섹션 -->
+		<div class="search-header">
+			<h1 class="search-title">
+				<i class="fas fa-book"></i> 도서 검색
+			</h1>
 
-				<form class="search-form" id="search-form">
-					<!-- 메인 검색창 -->
-					<div class="search-main">
+			<form class="search-form" id="search-form">
+				<!-- 메인 검색창 -->
+				<div class="search-main">
 <!--						<input type="text" class="search-input-main" id="searchKeyword"-->
 <!--							name="searchKeyword" value="${param.searchKeyword}"-->
 <!--							placeholder="도서명, 저자, ISBN 또는 출판사를 입력하세요">-->
-						<input type="text" class="search-input-main" id="keyword"
-						       name="keyword" value="${pageMaker.criteriaDTO.keyword}"
-						       placeholder="도서명, 저자, ISBN 또는 출판사를 입력하세요">
-						<button type="button" class="search-button-main"
-							onclick="fn_submit()">
-							<i class="fas fa-search"></i>
-						</button>
-					</div>
-
-					<!-- 필터 옵션 -->
-					<div class="search-filters">
-						<div class="search-filter">
-						    <label class="filter-label" for="type">검색 유형</label>
-						    <select class="filter-select" id="type" name="type">
-						        <option value="T" ${pageMaker.criteriaDTO.type eq 'T' ? 'selected' : ''}>도서명</option>
-						        <option value="A" ${pageMaker.criteriaDTO.type eq 'A' ? 'selected' : ''}>저자</option>
-						        <option value="I" ${pageMaker.criteriaDTO.type eq 'I' ? 'selected' : ''}>ISBN</option>
-						        <option value="P" ${pageMaker.criteriaDTO.type eq 'P' ? 'selected' : ''}>출판사</option>
-						    </select>
-						</div>
-
-						<div class="search-filter">
-							<label class="filter-label" for="majorCategory">대분류</label> <select
-								class="filter-select" id="majorCategory" name="majorCategory">
-								<option value="">전체</option>
-								<option value="000-총류"
-									${param.majorCategory == '000' ? 'selected' : ''}>000
-									- 총류</option>
-								<option value="100-철학"
-									${param.majorCategory == '100' ? 'selected' : ''}>100
-									- 철학</option>
-								<option value="200-종교"
-									${param.majorCategory == '200' ? 'selected' : ''}>200
-									- 종교</option>
-								<option value="300-사회학"
-									${param.majorCategory == '300' ? 'selected' : ''}>300
-									- 사회학</option>
-								<option value="400-자연과학"
-									${param.majorCategory == '400' ? 'selected' : ''}>400
-									- 자연과학</option>
-								<option value="500-기술과학"
-									${param.majorCategory == '500' ? 'selected' : ''}>500
-									- 기술과학</option>
-								<option value="600-예술"
-									${param.majorCategory == '600' ? 'selected' : ''}>600
-									- 예술</option>
-								<option value="700-언어"
-									${param.majorCategory == '700' ? 'selected' : ''}>700
-									- 언어</option>
-								<option value="800-문학"
-									${param.majorCategory == '800' ? 'selected' : ''}>800
-									- 문학</option>
-								<option value="900-역사"
-									${param.majorCategory == '900' ? 'selected' : ''}>900
-									- 역사</option>
-							</select>
-						</div>
-
-						<div class="search-filter">
-							<label class="filter-label" for="subCategory">중분류</label> <select
-								class="filter-select" id="subCategory" name="subCategory">
-								<option value="">전체</option>
-								<!-- 대분류에 따라 동적으로 변경될 수 있습니다 -->
-							</select>
-						</div>
-					</div>
-				</form>
-			</div>
-
-			<!-- Statistics Dashboard -->
-			<div class="stats-dashboard">
-				<div class="stat-card">
-					<div class="stat-icon books">
-						<i class="fas fa-book"></i>
-					</div>
-					<div class="stat-info">
-						<h3>전체 도서</h3>
-						<div class="number">
-							<fmt:formatNumber value="${totalBooks}" type="number" />
-						</div>
-					</div>
+					<input type="text" class="search-input-main" id="keyword"
+					       name="keyword" value="${pageMaker.criteriaDTO.keyword}"
+					       placeholder="도서명, 저자, ISBN 또는 출판사를 입력하세요">
+					<button type="button" class="search-button-main"
+						onclick="fn_submit()">
+						<i class="fas fa-search"></i>
+					</button>
 				</div>
 
-				<div class="stat-card">
-					<div class="stat-icon users">
-						<i class="fas fa-users"></i>
+				<!-- 필터 옵션 -->
+				<div class="search-filters">
+					<div class="search-filter">
+					    <label class="filter-label" for="type">검색 유형</label>
+					    <select class="filter-select" id="type" name="type">
+					        <option value="T" ${pageMaker.criteriaDTO.type eq 'T' ? 'selected' : ''}>도서명</option>
+					        <option value="A" ${pageMaker.criteriaDTO.type eq 'A' ? 'selected' : ''}>저자</option>
+					        <option value="I" ${pageMaker.criteriaDTO.type eq 'I' ? 'selected' : ''}>ISBN</option>
+					        <option value="P" ${pageMaker.criteriaDTO.type eq 'P' ? 'selected' : ''}>출판사</option>
+					    </select>
 					</div>
-					<div class="stat-info">
-						<h3>전체 회원</h3>
-						<div class="number">
-							<fmt:formatNumber value="${totalUsers}" type="number" />
-						</div>
+
+					<div class="search-filter">
+						<label class="filter-label" for="majorCategory">대분류</label> <select
+							class="filter-select" id="majorCategory" name="majorCategory">
+							<option value="">전체</option>
+							<option value="000-총류"
+								${param.majorCategory == '000' ? 'selected' : ''}>000
+								- 총류</option>
+							<option value="100-철학"
+								${param.majorCategory == '100' ? 'selected' : ''}>100
+								- 철학</option>
+							<option value="200-종교"
+								${param.majorCategory == '200' ? 'selected' : ''}>200
+								- 종교</option>
+							<option value="300-사회학"
+								${param.majorCategory == '300' ? 'selected' : ''}>300
+								- 사회학</option>
+							<option value="400-자연과학"
+								${param.majorCategory == '400' ? 'selected' : ''}>400
+								- 자연과학</option>
+							<option value="500-기술과학"
+								${param.majorCategory == '500' ? 'selected' : ''}>500
+								- 기술과학</option>
+							<option value="600-예술"
+								${param.majorCategory == '600' ? 'selected' : ''}>600
+								- 예술</option>
+							<option value="700-언어"
+								${param.majorCategory == '700' ? 'selected' : ''}>700
+								- 언어</option>
+							<option value="800-문학"
+								${param.majorCategory == '800' ? 'selected' : ''}>800
+								- 문학</option>
+							<option value="900-역사"
+								${param.majorCategory == '900' ? 'selected' : ''}>900
+								- 역사</option>
+						</select>
+					</div>
+
+					<div class="search-filter">
+						<label class="filter-label" for="subCategory">중분류</label> <select
+							class="filter-select" id="subCategory" name="subCategory">
+							<option value="">전체</option>
+							<!-- 대분류에 따라 동적으로 변경될 수 있습니다 -->
+						</select>
 					</div>
 				</div>
-
-				<div class="stat-card">
-					<div class="stat-icon borrowed">
-						<i class="fas fa-book-reader"></i>
-					</div>
-					<div class="stat-info">
-						<h3>대출 중인 도서</h3>
-						<div class="number">
-							<fmt:formatNumber value="${borrowedBooks}" type="number" />
-						</div>
-					</div>
-				</div>
-
-				<div class="stat-card">
-					<div class="stat-icon overdue">
-						<i class="fas fa-exclamation-circle"></i>
-					</div>
-					<div class="stat-info">
-						<h3>연체 도서</h3>
-						<div class="number">
-							<fmt:formatNumber value="${overdueBooks}" type="number" />
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Smaller Feature Cards -->
-			<div class="feature-section">
-				<div class="feature-card">
-					<div class="feature-icon">
-						<i class="fas fa-book-open"></i>
-					</div>
-					<div class="feature-content">
-						<h3>내 대출 현황</h3>
-						<p>현재 대출 중인 도서와 반납 예정일을 확인하세요.</p>
-						<!-- 						<a href="mypage?tab=history" class="btn-sm">바로가기</a> -->
-						<a href="user_book_borrowing" class="btn-sm">바로가기</a>
-					</div>
-				</div>
-
-				<div class="feature-card">
-					<div class="feature-icon">
-						<i class="fas fa-exchange-alt"></i>
-					</div>
-					<div class="feature-content">
-						<h3>도서 대출</h3>
-						<p>원하는 도서를 대출하여 이용하세요.</p>
-						<a href="book_search_view" class="btn-sm">바로가기</a>
-					</div>
-				</div>
-
-				<div class="feature-card">
-					<div class="feature-icon">
-						<i class="fas fa-star"></i>
-					</div>
-					<div class="feature-content">
-						<h3>도서 추천</h3>
-						<p>회원님의 관심사에 맞는 도서를 추천해 드립니다.</p>
-						<a href="user_book_recommend" class="btn-sm">바로가기</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Recommended Books -->
-			<div class="recommended-books">
-				<div class="section-header">
-					<h2 class="section-title">
-						<i class="fas fa-thumbs-up"></i> 추천 도서
-					</h2>
-					<a href="/user_book_recommend" class="action-link"> 더보기
-						<i class="fas fa-chevron-right"></i>
-					</a>
-				</div>
-
-
-				<div class="books-grid">
-					<c:forEach var="book" items="${bookList}" varStatus="status">
-						<c:if test="${status.index <4}">
-							<div class="book-card">
-								<div class="book-cover">
-									<!-- 									<img src="/pilotpjt/resources/images/book1.jpg" alt="도서 표지" -->
-									<!-- 										onerror="this.src='/pilotpjt/resources/images/default-book.jpg'; this.onerror=null;"> -->
-									<div class="book-cover-placeholder">
-										<i class="fas fa-book"></i>
-									</div>
-								</div>
-								<div class="book-info">
-									<h3 class="book-title">${book.bookTitle}</h3>
-									<div class="book-author">저자: ${book.bookWrite}</div>
-									<div class="book-publisher">출판사: ${book.bookPub}</div>
-									<div class="book-date">
-										출판일:
-										<fmt:formatDate value="${book.bookDate}"
-											pattern="yyyy년 MM월 dd일" />
-									</div>
-
-									<div class="book-categories">
-										<span class="book-category">${book.bookMajorCategory}</span>
-										<c:if test="${not empty book.bookSubCategory}">
-											<span class="book-category">${book.bookSubCategory}</span>
-										</c:if>
-									</div>
-
-									<div class="book-status">
-										<div
-											class="book-availability ${book.bookCount > 0 ? 'available' : 'unavailable'}">
-											<c:choose>
-												<c:when test="${book.bookCount > 0}">
-													<i class="fas fa-check-circle"></i> 대출 가능
-                                                </c:when>
-												<c:otherwise>
-													<i class="fas fa-times-circle"></i> 대출 불가
-                                                </c:otherwise>
-											</c:choose>
-										</div>
-										<a href="/book_detail?bookNumber=${book.bookNumber}"
-											class="book-detail-button">상세보기</a>
-									</div>
-								</div>
-							</div>
-						</c:if>
-					</c:forEach>
-				</div>
-			</div>
-
-			<%
-			} else {
-			%>
-			<div class="login-section">
-				<h2>잉크트리에 오신 것을 환영합니다</h2>
-				<p>
-					잉크 트리 도서관리 시스템은 다양한 도서를 검색하고 대출할 수 있는 서비스를 제공합니다.<br>서비스를
-					이용하시려면 로그인이 필요합니다.
-				</p>
-				<a href="/loginForm" class="btn"> <i
-					class="fas fa-sign-in-alt"></i> 로그인 하러 가기
-				</a>
-				<p style="margin-top: 20px;">
-					계정이 없으신가요? <a href="joinView">회원가입</a>
-				</p>
-			</div>
-			<%
-			}
-			%>
+			</form>
 		</div>
 
+		<!-- Statistics Dashboard -->
+		<div class="stats-dashboard">
+			<div class="stat-card">
+				<div class="stat-icon books">
+					<i class="fas fa-book"></i>
+				</div>
+				<div class="stat-info">
+					<h3>전체 도서</h3>
+					<div class="number">
+						<fmt:formatNumber value="${totalBooks}" type="number" />
+					</div>
+				</div>
+			</div>
 
-		<script>
+			<div class="stat-card">
+				<div class="stat-icon users">
+					<i class="fas fa-users"></i>
+				</div>
+				<div class="stat-info">
+					<h3>전체 회원</h3>
+					<div class="number">
+						<fmt:formatNumber value="${totalUsers}" type="number" />
+					</div>
+				</div>
+			</div>
+
+			<div class="stat-card">
+				<div class="stat-icon borrowed">
+					<i class="fas fa-book-reader"></i>
+				</div>
+				<div class="stat-info">
+					<h3>대출 중인 도서</h3>
+					<div class="number">
+						<fmt:formatNumber value="${borrowedBooks}" type="number" />
+					</div>
+				</div>
+			</div>
+
+			<div class="stat-card">
+				<div class="stat-icon overdue">
+					<i class="fas fa-exclamation-circle"></i>
+				</div>
+				<div class="stat-info">
+					<h3>연체 도서</h3>
+					<div class="number">
+						<fmt:formatNumber value="${overdueBooks}" type="number" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Smaller Feature Cards -->
+		<div class="feature-section">
+			<div class="feature-card">
+				<div class="feature-icon">
+					<i class="fas fa-book-open"></i>
+				</div>
+				<div class="feature-content">
+					<h3>내 대출 현황</h3>
+					<p>현재 대출 중인 도서와 반납 예정일을 확인하세요.</p>
+					<!-- 						<a href="mypage?tab=history" class="btn-sm">바로가기</a> -->
+					<a href="user_book_borrowing" class="btn-sm">바로가기</a>
+				</div>
+			</div>
+
+			<div class="feature-card">
+				<div class="feature-icon">
+					<i class="fas fa-exchange-alt"></i>
+				</div>
+				<div class="feature-content">
+					<h3>도서 대출</h3>
+					<p>원하는 도서를 대출하여 이용하세요.</p>
+					<a href="book_search_view" class="btn-sm">바로가기</a>
+				</div>
+			</div>
+
+			<div class="feature-card">
+				<div class="feature-icon">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="feature-content">
+					<h3>도서 추천</h3>
+					<p>회원님의 관심사에 맞는 도서를 추천해 드립니다.</p>
+					<a href="user_book_recommend" class="btn-sm">바로가기</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Recommended Books -->
+		<div class="recommended-books">
+			<div class="section-header">
+				<h2 class="section-title">
+					<i class="fas fa-thumbs-up"></i> 추천 도서
+				</h2>
+				<a href="/user_book_recommend" class="action-link"> 더보기
+					<i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+
+
+			<div class="books-grid">
+				<c:forEach var="book" items="${bookList}" varStatus="status">
+					<c:if test="${status.index <4}">
+						<div class="book-card">
+							<div class="book-cover">
+								<!-- 									<img src="/pilotpjt/resources/images/book1.jpg" alt="도서 표지" -->
+								<!-- 										onerror="this.src='/pilotpjt/resources/images/default-book.jpg'; this.onerror=null;"> -->
+								<div class="book-cover-placeholder">
+									<i class="fas fa-book"></i>
+								</div>
+							</div>
+							<div class="book-info">
+								<h3 class="book-title">${book.bookTitle}</h3>
+								<div class="book-author">저자: ${book.bookWrite}</div>
+								<div class="book-publisher">출판사: ${book.bookPub}</div>
+								<div class="book-date">
+									출판일:
+									<fmt:formatDate value="${book.bookDate}"
+										pattern="yyyy년 MM월 dd일" />
+								</div>
+
+								<div class="book-categories">
+									<span class="book-category">${book.bookMajorCategory}</span>
+									<c:if test="${not empty book.bookSubCategory}">
+										<span class="book-category">${book.bookSubCategory}</span>
+									</c:if>
+								</div>
+
+								<div class="book-status">
+									<div
+										class="book-availability ${book.bookCount > 0 ? 'available' : 'unavailable'}">
+										<c:choose>
+											<c:when test="${book.bookCount > 0}">
+												<i class="fas fa-check-circle"></i> 대출 가능
+                                                </c:when>
+											<c:otherwise>
+												<i class="fas fa-times-circle"></i> 대출 불가
+                                                </c:otherwise>
+										</c:choose>
+									</div>
+									<a href="/book_detail?bookNumber=${book.bookNumber}"
+										class="book-detail-button">상세보기</a>
+								</div>
+							</div>
+						</div>
+					</c:if>
+				</c:forEach>
+			</div>
+		</div>
+
+		<%
+		} else {
+		%>
+		<div class="login-section">
+			<h2>잉크트리에 오신 것을 환영합니다</h2>
+			<p>
+				잉크 트리 도서관리 시스템은 다양한 도서를 검색하고 대출할 수 있는 서비스를 제공합니다.<br>서비스를
+				이용하시려면 로그인이 필요합니다.
+			</p>
+			<a href="/loginForm" class="btn"> <i
+				class="fas fa-sign-in-alt"></i> 로그인 하러 가기
+			</a>
+			<p style="margin-top: 20px;">
+				계정이 없으신가요? <a href="joinForm">회원가입</a>
+			</p>
+		</div>
+		<%
+		}
+		%>
+	</div>
+	<!-- 메인 컨테이너 종료 -->
+
+	<script>
         document.addEventListener('DOMContentLoaded', function() {
             // Animate statistics numbers
             const statNumbers = document.querySelectorAll('.number');
@@ -461,5 +462,7 @@ if (majorCategory === '000-총류') {
         	  setInterval(nextSlide, 3000);
         	});
     </script>
+	<!-- footer를 컨테이너 밖으로 이동 -->
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
